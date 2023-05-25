@@ -1,0 +1,128 @@
+---
+title: "Matriz de Pesos Espaciales (W)"
+editor: visual
+---
+
+## Matriz de Pesos Espaciales
+
+Una de las operaciones cruciales en la econometria espacial es expresar formalmente las dependencias espaciales para poder incorporarlas en un modelo, para esto asumimos que las observaciones estan organizadas en datos espaciales los cuales pueden ser puntos en una área regular o irregular, o en su defecto regiones en un mapa.
+
+Para hacer esto vamos a introducir el concepto de Matriz de pesos espaciales o matriz de contigüidad, Considere un sistema S de N unidades espaciales, numeradas i = 1, 2,3,...,n y una variable x observable para cada una de esas unidades espaciales
+
+$$
+W = \begin{equation}\begin{bmatrix}w_{11} & w_{12} &  ... & w_{1n}\\w_{21} & w_{22} & ... & w_{2n} \\ ... & ... & ... & ...\\ w_{n1} & w_n2 & ... & w_{nn}\end{bmatrix}\end{equation}
+$$
+
+donde cada elemento de esta matriz de contigüidad esta definido como:
+
+$$
+w_{ij}= \left\{ \begin{array}{lcc} 1 &   si  & j \in N(i) \\ 0 &  si &j \notin N(i)  
+\end{array} \right.
+$$
+
+donde *N(i)* es el conjunto de vecinos de la localización j, De esta manera la matriz W es una matriz cuadrada no estocastica cuyos elementos *w* reflejan la contigüidad entre los datos espaciales, cada elemento 1 de la matriz correspondera a una contiguidad entre unidades espaciales, por convención un dato espacial no puede ser contigüo consigo mismo lo cual nos resulta en una diagonal principal de ceros.
+
+Para definir la matriz W podemos usar diferentes criterios sobre el conjunto de vecinos de una localización, usualmente recurrimos a criterios de contigüidad fisicos, tal que tenemos 3 tipos de criterios principales:
+
+## Contigüidad Fisica
+
+### Criterio Tipo Torre
+
+La matriz tipo torre define como vecinos a las observaciones o datos espaciales que comparten algún lado espacial, como solo hablamos de lados podemos imaginarnos los movimientos de la ficha de Ajedres Torre
+
+![](movimiento%20torre.png){fig-align="center"}
+
+### Criterio Tipo Reina
+
+La matriz tipo reina define como vecinos a las observaciones o datos espaciales que comparten cualquier limite espacial, al igual que en el ejemplo anterior podemos imaginarnos los movimientos de la ficha de Ajedres Reina (Dama)
+
+![](movimiento%20dama.png){fig-align="center"}
+
+### Criterio Tipo Alfil
+
+La matriz tipo alfil define como vecinos a las observaciones o datos espaciales que comparten limites diagonales, al igual que en el ejemplo anterior podemos imaginarnos los movimientos de la ficha de Ajedres Alfil
+
+![](movimiento%20alfil.png){fig-align="center"}
+
+## Contigüidad en Función de Distancia
+
+Estos tres criterios anteriores usan al usar una contigüidad fisica son facilmente usables en poligonos regulares, sin embargo, la mayoria de poligonos son poligonos irregulares en donde un criterio de contigüidad fisica es un criterio muy restrictivo, es por esto que recurrimos a marcas o rciterios en función de la distancia, esta distancia se puede calcular de diferentes maneras
+
+-   Euclidiana
+
+-   Manhattan
+
+-   Minskowski
+
+### K - vecinos más cercanos (KNN)
+
+En KNN obtendremos una matriz binaria en la cual generaremos unos centroides en cada poligono espacial, y calcularemos la distancia entre el centroide de nuestro poligono de interés y los centroides de los demas poligonos, los organizaremos y diremos que los k poligonos más cercanos son contigüos
+
+$$
+w_{ij}= \left\{ \begin{array}{lcc} 1 &   si  & \text{el centroide de j es uno de los k centroides cercanos a i} \\ 0 &  si & \text{en otro caso}  
+\end{array} \right.
+$$
+
+### Distancia Basada en Umbrales / radios
+
+En distancia basada en umbrales o radios obtendremos una matriz binaria en donde a criterio del investigador diremos que hay una contigüidad si la distancia entre centroides esta por debajo de determinado rango.
+
+$$
+w_{ij}= \left\{ \begin{array}{lcc} 1 &   si  & \text{la distancia entre j e i es menor a n distancia} \\ 0 &  si & \text{en otro caso}  
+\end{array} \right.
+$$
+
+### Distancia Inversa
+
+En la distancia inversa no obtendremos una matriz bianaria sino que nuestro parametro diferente de cero cambiará en función de la distancia inversa, es decir a mayor distancia menor el parametro y viceversa, en este criterio podremos controlar el nivel de descenso de la influencia de la distancia con un parametro alpha, tal que:
+
+$$
+w_{ij}= \left\{ \begin{array}{lcc} \frac{1}{d^{\alpha}} &   si  & i \neq j \\ 0 &  si & i = j  
+\end{array} \right.
+$$
+
+## Matriz de Pesos Espaciales Estandarizada
+
+Algunas veces requerimos estandarizar la matriz W, esta estandarización corresponde a la siguiente operación por filas:
+
+$$
+w^{*}_{ij} = \frac{w_{ij}}{\sum w_{ij}}
+$$ donde
+
+$$w^{*}_{ij} \in W^{*}$$ Es decir cada elemento estandarizado de la matriz de pesos espaciales corresponde a la división entre 0 o 1 y la sumatoria de elementos con relación de esa fila, lo cual seria el porcentaje del total de relaciones de cada fila
+
+Esta estandarización puede ser muy útil en algunas instancias. por ejemplo, usando la matriz de pesos espaciales estandarizada podemos operador de retardo espacial.
+
+## Operador de Retardo Espacial
+
+Uno de los objetivos del uso de matrices de pesos espaciales en la especificación de un modelo econometrico espacial es poder relatar una variable en un punto en el espacio de las observaciones para esa variable entre otras unidades espaciales en el sistema, esto en el contexto de series de tiempo se le denomina como operador de retardo de la forma:
+
+$$
+y_{t-k} = L^{k}y
+$$
+
+En el espacio no tenemos una dimensión temporal sino una dimensión geografica tal que en función del tipo de criterio que elijamos obtendremos un retardo espacacial diferente, para calcular el retardo espacial usamos:
+
+$$
+\rho = W^{*}Y
+$$
+
+En una matriz de tipo reina obtendremos un rezago parecido al siguiente:
+
+![](Retardo%20Espacial%20Reina.png){fig-align="center" width="285"}
+
+Mientras que en una matriz de tipo torre tendremos un rezago parecido al siguiente:
+
+![](Retardo%20Espacial%20Torre.png){fig-align="center" width="280"}
+
+## PENDIENTE
+
+a esta pagina falta añadirle codigo en R y un ejemplo (puede ser el del parcial)
+
+## Bibliografia
+
+Anselin, L. (1988). Spatial econometrics: methods and models. Vol. 4. Springer Science & Business Media.
+
+Arbia, G. (2014). *A Primer for Spatial Econometrics: With Applications in R*. Palgrave Macmillan.
+
+\

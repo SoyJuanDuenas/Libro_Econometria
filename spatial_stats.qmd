@@ -1,0 +1,55 @@
+---
+title: "¿Qué es la Estadistica y Econometría Espacial?"
+---
+
+## Estadistica Espacial
+
+La estadistica espacial introduce la ubicación espacial de las observaciones, es decir, trabajamos con datos georeferenciados. Si recordamos la primera Ley de Tolber "Todo esta relacionado con todo lo demás, pero cosas cercanas están mas relacionadas que cosas distantes" nos daremos cuenta que al hacer analísis espaciales vamos a necesitar herramientas diferentes a las tradicionales. dentro de la Estadistica Espacial vamos a encontrar tres principales áreas de conocimientos:
+
+-   **Geoestadística / Geostatical Data:** La geoestadistica se centra en el análisis y la modelización de cambios en variables continuas asociadas a información espacial, en esta rama tenemos unos puntos de medición a lo largo del tiempo e intentamos estimar como se comporta la variable en otros puntos cercanos.
+
+-   **Procesos Puntuales / Point Patterns** Este tipo de análisis estudia la distribución de la ubicación de una serie de eventos en una región determinada. Por ejemplo casos de una enfermedad en una ciudad o la distribución de cada especie de arboles en un bosque, usualmente los procesos puntuales tienden a preguntarse si la aprarición de los sucesos es uniforme (o aleatoria) en el espacio o si en algunos lugares los sucesos aparecen con mayor o menor frecuencia
+
+-   **Datos Agregados / Lattice Data** En este tipo de analisis conocemos la ubicación de todos los eventos de interés o al menos agregados en una región de estudio y por ende analizamos individualmente, en general usamos modelos de regresión que modelan la correlación entre variables vecinas.
+
+## Datos Espaciales
+
+Los datos espaciales se pueden definir como información que representa la posición de un punto o área en el espacio con los atributos asociados a esta información La información espacial esta asociada a un poligono irregular (área) o a configuraciones regulares (lattice)
+
+Estos datos tienen dos vectores dimensionales de localización, incluso un tercer vector de altura. A partir de esto podemos sacar patrones de puntos espaciales respecto a la ocurrencia o no de un evento.
+
+## Econometría Espacial
+
+La econometría espacial hace parte de los datos agregados, al introducir datos espaciales nos vamos a dar cuenta que el análisis econometrico tradicional no va a ser suficiente dado que en la mayoria de casos puede presentar autocorrelación espacial y por ende requeriremos nuevas tecnicas de análisis, usaremos como base la ya conocida regresión lineal y a este modelo le agregaremos terminos que nos modelen explicitamente al dependencia espacial con regiones vecinas, con esto podremos poner en evidencia diferentes efectos espaciales como el Spillover efect (derrame) y solucionar los problemas de autocorrelación espacial entre las variables del modelo .
+
+La econometría espacial tiene aplicaciones en muchos campos, especialmente en:
+
+-   Biologia
+
+-   Ciencia Politica
+
+-   Climatologia
+
+-   Medicina y Epidemiologia
+
+-   Urbanismo y Economía
+
+## Efectos Espaciales
+
+Los efectos espaciales son la razón principal de tener un campo serapado entre la econometría y la econometría espacial, los principales efectos espaciales son:
+
+### Dependencia Espacial
+
+En la mayoria de ejercicios empiricos en la cual se aplica la ciencia regional los datos contienen caracteristicas de espacio o espacio y tiempo, es decir, datos espaciales. la dependencia espacial puede ser considerada como la existencia de un relación entre lo que pasa en un punto en el espacio y lo que pasa en otro lugar. esto puede ser ocasionado por dos motivos principales, el primero es un termino de error de las observaciones en una unidad espacial contigüa (efecto Spillover) y el segundo es que existe algún fenomeno de interacción espacial natural del comportamiento humano.
+
+### Heterogeneidad Espacial
+
+Las unidades espaciales tienden a estar lejanas de la homogeneidad, por ejemplo lugares urbanos tienen poblaciones de diferentes niveles de ingreso y las regiones tienen varios grados de desarrollo tecnologico estos pueden estar reflejados en errores altos sea por incorrecta especificación o por ausencia de variables relevantes termina por resultar en heterosceasticidad
+
+## Bibliografia
+
+Anselin, L. (1988). Spatial econometrics: methods and models. Vol. 4. Springer Science & Business Media.
+
+Cressie, N. (2015). Statistics for spatial data. John Wiley & Sons.
+
+Gómez.-Rubio V(2022) Una introducción a la estadística espacial. Universidad de Castilla-La Mancha

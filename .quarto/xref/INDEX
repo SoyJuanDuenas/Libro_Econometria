@@ -1,0 +1,23 @@
+{
+  "index.qmd": {
+    "index.html": "fcce4d6f"
+  },
+  "about.qmd": {
+    "about.html": "d2543f86"
+  },
+  "about_econometria_espacial.qmd": {
+    "about_econometria_espacial.html": "09672062"
+  },
+  "about_fundamentos_r.qmd": {
+    "about_fundamentos_r.html": "b15c9105"
+  },
+  "operaciones.qmd": {
+    "operaciones.html": "052b68d6"
+  },
+  "spatial_stats.qmd": {
+    "spatial_stats.html": "3aae77cc"
+  },
+  "w.qmd": {
+    "w.html": "bdecd422"
+  }
+}

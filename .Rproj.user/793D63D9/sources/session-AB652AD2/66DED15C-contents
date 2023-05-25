@@ -1,0 +1,40 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Spatial Econometrics"
+  navbar:
+    left:
+      - href: about.qmd
+        text: Acerca de
+
+      - href: index.qmd
+        text: Guía de estudio
+
+  sidebar:
+    style: "docked"
+    search: true
+    contents:
+      - section: "Introducción"
+        contents:
+          - href: index.qmd
+            text: ¿Qué es la Econometría Espacial?
+          - href: w.qmd
+            text: Matriz de Pesos Espaciales (W)
+            
+      - section: "Supuestos y modelaje espacial"
+        contents:
+          - href: auto_espacial.qmd
+            text: Autocorrelaciones espaciales
+          - href: modelos_espaciales.qmd
+            text: Primeros modelos espaciales
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+editor: visual
+
