@@ -18,8 +18,6 @@ website:
         contents:
           - href: about_fundamentos_r.qmd
             text: Introducción
-          - href: operaciones.qmd
-            text: Operaciones y Objetos Basicos
             
       - section: "Series de Tiempo"
         contents:
