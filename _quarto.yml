@@ -21,6 +21,15 @@ website:
           - href: operaciones.qmd
             text: Operaciones y Objetos Basicos
             
+      - section: "Series de Tiempo"
+        contents:
+          - href: ts_e_uni.qmd
+            text: Series de Tiempo Estacionarias (Univariadas)
+          - href: ts_ne_uni.qmd
+            text: Series de Tiempo No Estacionarias (Univariadas)
+          - href: operaciones.qmd
+            text: Series de Tiempo Estacionarias (Multivariadas)
+            
       - section: "Econometría Espacial"
         contents:
           - href: about_econometria_espacial.qmd

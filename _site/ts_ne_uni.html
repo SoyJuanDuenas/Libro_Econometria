@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1.189">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Libro Econometría - Series de Tiempo No Estacionarias (Univariadas)</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-sidebar docked nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Libro Econometría</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html">Acerca de</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./about_fundamentos_r.html" aria-current="page">Home</a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title">Series de Tiempo No Estacionarias (Univariadas)</h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation docked overflow-auto">
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">Fundamentos de R</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./about_fundamentos_r.html" class="sidebar-item-text sidebar-link">Introducción</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./operaciones.html" class="sidebar-item-text sidebar-link">Series de Tiempo Estacionarias (Multivariadas)</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">Series de Tiempo</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ts_e_uni.html" class="sidebar-item-text sidebar-link">Series de Tiempo Estacionarias (Univariadas)</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ts_ne_uni.html" class="sidebar-item-text sidebar-link active">Series de Tiempo No Estacionarias (Univariadas)</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./operaciones.html" class="sidebar-item-text sidebar-link">Series de Tiempo Estacionarias (Multivariadas)</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">Econometría Espacial</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./about_econometria_espacial.html" class="sidebar-item-text sidebar-link">Introducción</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./spatial_stats.html" class="sidebar-item-text sidebar-link">Estadistica y Relaciones Espaciales</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./w.html" class="sidebar-item-text sidebar-link">Matriz de Pesos Espaciales (W)</a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#tendencias" id="toc-tendencias" class="nav-link active" data-scroll-target="#tendencias">Tendencias</a>
+  <ul class="collapse">
+  <li><a href="#procesos-altamente-persistentes" id="toc-procesos-altamente-persistentes" class="nav-link" data-scroll-target="#procesos-altamente-persistentes">Procesos altamente persistentes</a></li>
+  <li><a href="#procesos-de-caminatas-aleatorias-con-deriva" id="toc-procesos-de-caminatas-aleatorias-con-deriva" class="nav-link" data-scroll-target="#procesos-de-caminatas-aleatorias-con-deriva">Procesos de caminatas aleatorias con deriva</a></li>
+  <li><a href="#procesos-con-estocasticos-con-tendencias" id="toc-procesos-con-estocasticos-con-tendencias" class="nav-link" data-scroll-target="#procesos-con-estocasticos-con-tendencias">Procesos con estocasticos con tendencias</a></li>
+  </ul></li>
+  <li><a href="#prueba-de-raiz-unitaria-dickey---fuller-df" id="toc-prueba-de-raiz-unitaria-dickey---fuller-df" class="nav-link" data-scroll-target="#prueba-de-raiz-unitaria-dickey---fuller-df">Prueba de Raiz Unitaria, Dickey - Fuller (DF)</a>
+  <ul class="collapse">
+  <li><a href="#prueba-de-dickey-fuller-aumentada-adf" id="toc-prueba-de-dickey-fuller-aumentada-adf" class="nav-link" data-scroll-target="#prueba-de-dickey-fuller-aumentada-adf">Prueba de Dickey Fuller Aumentada (ADF)</a></li>
+  </ul></li>
+  <li><a href="#pendientes" id="toc-pendientes" class="nav-link" data-scroll-target="#pendientes">Pendientes</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block">Series de Tiempo No Estacionarias (Univariadas)</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    
+  </div>
+  
+
+</header>
+
+<section id="tendencias" class="level2">
+<h2 class="anchored" data-anchor-id="tendencias">Tendencias</h2>
+<p>Podemos decir que existen 2 tipos de tendencias, las tendencias deterministicas y estocasticas, estas se pueden representar de la forma:</p>
+<p><span class="math display">\[
+y_t = \text{tendencia} + \text{componente estacionario} + \text{error}
+\\
+y_t = a_0 + \delta t + \varepsilon_t
+\]</span></p>
+<p>Una tendencia deterministica es una función no aleatoria del tiempo, mientras que una tendencia estocastica es aleatoria y varia en el tiempo, las tendencias pueden detectarse mediante:</p>
+<ul>
+<li><p>Metodos informales: Grafico de la serie y función de autocorrelación muestral</p></li>
+<li><p>Metodos formales: Prueba de raíces unitarias Dickey-Fuller</p></li>
+</ul>
+<p>Un ejemplo de una tendencia estocastica es una caminata aleatoria</p>
+<section id="procesos-altamente-persistentes" class="level3">
+<h3 class="anchored" data-anchor-id="procesos-altamente-persistentes">Procesos altamente persistentes</h3>
+<p>Sea un proceso estocastico <span class="math inline">\(y_t\)</span> que sigue una <strong>caminata aleatoria</strong> si:</p>
+<p><span class="math display">\[
+y_t = y_{t-1} + \varepsilon_{t}
+\\
+\varepsilon_t \thicksim RB(0, \sigma^2)
+\]</span></p>
+<p>Si hacemos sustitución repedida de esta formula:</p>
+<p><span class="math display">\[
+y_1 = y_0 + \varepsilon_1
+\\
+y_2 = y_0 + \varepsilon_1 + \varepsilon_{2}
+\\
+y_2 = y_0 + \varepsilon_1 + \varepsilon_2 + \varepsilon_3
+\]</span></p>
+<p>lo cual podemos expresar como:</p>
+<p><span class="math display">\[
+y_t = y_0 + \sum^{t}_{i=0}{\varepsilon_{t-i}}
+\]</span></p>
+<p>Si asumimos <span class="math inline">\(y_0\)</span> como un valor deterministico podremos decir lo siguiente de un proceso altamente persistente:</p>
+<p>media:</p>
+<p><span class="math display">\[
+E[y_{t}] = y_0
+\]</span></p>
+<p>Varianza:</p>
+<p><span class="math display">\[
+var[y_t] = \sum^{t}_{i = 1}{var(\varepsilon_{t-i})}
+\\
+var[y_t] = t\sigma^2
+\]</span></p>
+<p>La varianza varia en función de de t, es decir no es constante y por ende diremos que el proceso no es estacionario, si conocemos la media y la varianza de un proceso podemos conocer tambien la función de autocovarianza.</p>
+<p>sabemos que:</p>
+<p><span class="math display">\[
+\gamma_s = E[(y_t-y_0)(y_{t-s}-y_0)]
+\]</span></p>
+<p>Y podemos expresar <span class="math inline">\(y_t\)</span> como:</p>
+<p><span class="math display">\[
+y_t - y_0 = \sum^{t}_{i=0}{\varepsilon_{j}}
+\]</span></p>
+<p>por lo cual remplazando tenemos que:</p>
+<p><span class="math display">\[
+\gamma_s = E[(\sum^{t}_{i=1}{\varepsilon_{j}})(\sum^{t - s}_{i=1}{\varepsilon_{j}})]
+\\
+\gamma_s = E[(\sum^{t-s}_{i=1}{\varepsilon^{2}_{j}})]
+\\
+\gamma_s = \sum^{t-s}_{i=1}{E[\varepsilon^{2}_{j}]}
+\\
+\gamma_s = (t-s)\sigma^2_{\varepsilon}
+\]</span></p>
+<p>Finalmente hallamos la autocorrelación:</p>
+<p>sabemos que:</p>
+<p><span class="math display">\[
+\rho_s = \frac{cov(y_t, y_{t-s})}{\sqrt{var(y_t)*var(y_{t-s})}}
+\\
+\rho_s = \frac{\sigma^2_{\varepsilon}(t-s)}{\sqrt{\sigma^2_{\varepsilon}t *\sigma^2_{\varepsilon}(t-s)}}
+\\
+\rho = \frac{\sigma^2_{\varepsilon}(t-s)}{\sigma^2_{\varepsilon}\sqrt{t(t-s)}}
+\\
+\rho_s = \frac{t-s}{\sqrt{t}\sqrt{t-s}}
+\\
+\rho_s = \sqrt{\frac{t-s}{t}}
+\]</span></p>
+</section>
+<section id="procesos-de-caminatas-aleatorias-con-deriva" class="level3">
+<h3 class="anchored" data-anchor-id="procesos-de-caminatas-aleatorias-con-deriva">Procesos de caminatas aleatorias con deriva</h3>
+<p>la deriva la podemos definir como una constante <span class="math inline">\(a_0\)</span> que nos deja al modelo de la siguiente forma:</p>
+<p><span class="math display">\[
+y_t = a_0 + y_{t-1} + \varepsilon_{t}
+\]</span></p>
+<p>si queremos visualizar las diferencias entre el proceso de caminata aleatoria y el proceso de caminata aleatoria con deriva podemos mirar el siguiente la siguiente imagen</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="caminata_aleatoria_y_ca_deriva.jpeg" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>si realizamos la iteración del proceso obtendremos el siguiente resultado:</p>
+<p><span class="math display">\[
+y_1 = a_0 + y_0 + \varepsilon_1
+\\
+y_2 = a_0 + y_1 + \varepsilon_2
+\\
+y_2 = a_0 + (a_0 + y_0 + \varepsilon_1) + \varepsilon_2
+\\
+y_2 = 2a_0 + y_0 + \varepsilon_1 + \varepsilon_2
+\]</span></p>
+<p>Por lo cual generalizando:</p>
+<p><span class="math display">\[
+y_t = a_0t + y_0 + \sum^{t}_{i = 1}{\varepsilon_i}
+\]</span></p>
+<p>El comportamiento de <span class="math inline">\(y_t\)</span> esta dado por dos componentes no estacionarios, uno lineal y deterministico <span class="math inline">\(a_0\)</span> y un componente estocastico <span class="math inline">\(\sum{\varepsilon_i}\)</span> al obtener el valor esperado tenemos que:</p>
+<p><span class="math display">\[
+E[y_t] = E[a_0t] + E[y_0] + E[\sum^{t}_{i = 1}{\varepsilon_i}]
+\\
+E[y_t] = a_0t + y_0
+\]</span></p>
+<p>el cual es de la misma forma que una recta <span class="math inline">\(mx + b\)</span>, por lo cual diremos que el valor esperado de un proceso de caminata aleatoria con deriva nos mostrará en promedio cual será la tendencia que va a seguir el proceso.</p>
+<p>dado que nuestra deriva es constante no nos va a afectar nuestra varianza, autocovarianza ni autocorrelación:</p>
+<p>varianza:</p>
+<p><span class="math display">\[
+var[y_t] = t\sigma^2
+\]</span></p>
+<p>autocovarianza</p>
+<p><span class="math display">\[
+\gamma_s = (t-s)\sigma^2_{\varepsilon}
+\]</span></p>
+<p>autocorrelación</p>
+<p><span class="math display">\[
+\rho_s = \sqrt{\frac{t-s}{t}}
+\]</span></p>
+</section>
+<section id="procesos-con-estocasticos-con-tendencias" class="level3">
+<h3 class="anchored" data-anchor-id="procesos-con-estocasticos-con-tendencias">Procesos con estocasticos con tendencias</h3>
+<p>si tenemos un proceso estocastico <span class="math inline">\(y_t\)</span> y este proceso obedece a un modelo ARMA(p,q) con tendencia deterministica lineal, esta obedece a la ecuación.</p>
+<p><span class="math display">\[
+a(L)y_t = a_0 + \delta t + \beta(L)\varepsilon_t
+\]</span></p>
+<p>Un proceso estocastico <span class="math inline">\(y_t\)</span> sigue un modelo ARIMA (p,d,q) si <span class="math inline">\(y_t \thicksim ARMA\)</span> donde, recordemos que una diferenciación es de la forma y se expersa la cantidad de diferenciaciones de la serie en el componente d del arima.</p>
+<p><span class="math display">\[
+\Delta^\alpha y_t = (1 - L)^\alpha y_t
+\]</span></p>
+<p>por lo cual un modelo ARIMA (p,d,q) puede ser escrito como:</p>
+<p><span class="math display">\[
+a(L)\Delta^{\alpha}y_t = a_0 + \beta (L)\varepsilon_t
+\\
+\Delta^{\alpha}y_t = ARMA(p,q) + \varepsilon_t
+\]</span></p>
+<p>Si por otro lado queremos incluir un proceso que modele la tendencia ya no lineal sino cuadratica tambien se puede hacer, tal que:</p>
+<p><span class="math display">\[
+y_t = c + at + bt^2 + \varepsilon_t
+\]</span></p>
+</section>
+</section>
+<section id="prueba-de-raiz-unitaria-dickey---fuller-df" class="level2">
+<h2 class="anchored" data-anchor-id="prueba-de-raiz-unitaria-dickey---fuller-df">Prueba de Raiz Unitaria, Dickey - Fuller (DF)</h2>
+<p>La prueba de raíz unitaria ADF es una prueba formal para determinar si una serie de tiempo tiene una raíz unitaria, es decir determinar si sigue una caminata aleatoria o un proceso estacionario.</p>
+<p>Sea:</p>
+<p><span class="math display">\[
+y_t = \alpha + \phi y_{t-1} + \varepsilon_t
+\]</span></p>
+<p>si <span class="math inline">\(|\phi_t| &lt; 1\)</span> entonces AR(1) es estacionario</p>
+<p>Restemos <span class="math inline">\(y_{t-1}\)</span> a ambos lados de la ecuación</p>
+<p><span class="math display">\[
+y_t - y_{t-1} = \alpha + \phi y_{t-1} - y_{t-1} + \varepsilon_t
+\\
+\Delta y_t = \alpha + (\phi- 1)y_{t-1} + \varepsilon_t
+\\
+\Delta y_t = \alpha + \rho y_{t-1} + \varepsilon_t
+\]</span></p>
+<p>Y estimamos <span class="math inline">\(\rho\)</span>, diremos que:</p>
+<ul>
+<li><p>Si <span class="math inline">\(\rho = 0\)</span> Hay raiz unitaria, es decir tenemos una caminata aleatoria con deriva</p>
+<p><span class="math display">\[
+y_t = \alpha + y_{t-1} + \varepsilon_t
+\]</span></p></li>
+<li><p>si <span class="math inline">\(\rho &lt; 0\)</span> No hay raiz unitaria, es decir tenemos un proceso AR estacionario</p>
+<p><span class="math display">\[
+y_t = \alpha + \phi y_{t-1} + \varepsilon_t
+\]</span></p></li>
+</ul>
+<p>El estadistico de prueba será el siguiente que compararemos con el valor critico</p>
+<p><span class="math display">\[
+t_{calc} = \frac{\widehat{\rho}}{ee(\widehat{\rho})}
+\]</span></p>
+<section id="prueba-de-dickey-fuller-aumentada-adf" class="level3">
+<h3 class="anchored" data-anchor-id="prueba-de-dickey-fuller-aumentada-adf">Prueba de Dickey Fuller Aumentada (ADF)</h3>
+<p>Si los datos muestran una tendencia clara, debemos usar la ADF, la ecuación de podría estimarse en este caso es:</p>
+<p><span class="math display">\[
+\Delta y_t = \alpha + \rho y_{t-1} + \gamma t + \varepsilon_t
+\]</span></p>
+<p>Muy importante tener en cuenta que la inclusión de una tendencia lineal modifica los valores criticos para la prueba t</p>
+<p>si los errores presentan correlación serial, la DF no es apropiada, para esto añadimos <span class="math inline">\(\rho\)</span> rezagos de <span class="math inline">\(\Delta y_{t}\)</span>,</p>
+</section>
+</section>
+<section id="pendientes" class="level1">
+<h1>Pendientes</h1>
+<p>en vez de colocar fotos de series deberiamos colocar codigo y simulaciones</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

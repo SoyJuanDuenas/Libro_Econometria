@@ -1,0 +1,226 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Libro Econometría",
+    "section": "",
+    "text": "Le damos la bienvenida a este proyecto desarrollado por estudiantes de economía de la Universidad Nacional de Colombia, en el cual el lector podrá encontrar todo el material necesario para aprender desde cero todo lo relacionado con la linea de econometría de la carrera de economía por medio de explicaciones teoricas, ejemplos practicos y codigo de R. Adicional a esto, el lector podrá encontrar material adicional a los topicos obligatorios usuales en las carreras de economía.\nCreemos en que el conocimiento debe ser abierto y libre en donde lo único que se necesita para aprender es tener la iniciativa. Si el estudiante toma este libro, complementa con la bibliografía y hace ejercicios adicionales al final del recorrido tendrá un conocimiento superior al estudiante promedio de economía, queremos en este libro plasmar toda la ruta para darle las herramientas necesarias al estudiante inquieto y deseoso de conocimiento."
+  },
+  {
+    "objectID": "index.html#como-leer-el-libro",
+    "href": "index.html#como-leer-el-libro",
+    "title": "Libro Econometría",
+    "section": "¿Como leer el libro?",
+    "text": "¿Como leer el libro?\nacá se va explicar como ubicarse en la plataforma donde va codigo, bibliografia, y explicaciones teoricas"
+  },
+  {
+    "objectID": "index.html#indice",
+    "href": "index.html#indice",
+    "title": "Libro Econometría",
+    "section": "Indice",
+    "text": "Indice\nacá va el Indice"
+  },
+  {
+    "objectID": "index.html#autores",
+    "href": "index.html#autores",
+    "title": "Libro Econometría",
+    "section": "Autores",
+    "text": "Autores\n\nJuan David Dueñas Garavito\nGerman Camilo Rodriguez"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "about_econometria_espacial.html",
+    "href": "about_econometria_espacial.html",
+    "title": "About",
+    "section": "",
+    "text": "En esta pagina vamos a desarrollar tanto de manera teorica como practica la Econometría Espacial desde una perspectiva pedagogica aplicandola con Codigos de R a diferentes situaciones."
+  },
+  {
+    "objectID": "about_fundamentos_r.html",
+    "href": "about_fundamentos_r.html",
+    "title": "About",
+    "section": "",
+    "text": "En este documento se abordarán los fundamentos del lenguaje de programación estadística R. R es uno de los lenguajes más populares para el análisis de datos y la ciencia de datos y es utilizado por muchos profesionales y organizaciones en todo el mundo. El objetivo de este documento es proporcionar una guía práctica para aquellos que quieren aprender a programar en R, así como para aquellos que ya tienen experiencia en R pero quieren mejorar sus habilidades y ampliar sus conocimientos.\nEste documento está diseñado para ser utilizado como una referencia práctica para aquellos que trabajan con R en su trabajo o proyectos personales. Al final del documento, se espera que los lectores tengan las habilidades necesarias para trabajar con datos en R y aplicar técnicas de análisis de datos y visualización en sus proyectos de ciencia de datos."
+  },
+  {
+    "objectID": "operaciones.html",
+    "href": "operaciones.html",
+    "title": "Primeros Pasos",
+    "section": "",
+    "text": "R es un lenguaje de programación y entorno de desarrollo estadistico gratuito y de codigo abierto, cualquier persona puede descargarlo utilizarlo y modificarlo esto permite que tenga una gran comunidad y documentación bien detallada de cada una de sus funcionalidades y paquetes, R es orientado a objetos lo que significa que los datos se organizan en objetos que se pueden manipular y analizar, R cuenta con una interfaz gráfica de usuario llamada RStudio que facilita el trabajo con el lenguaje y permite la creación y visualización de datos de manera sencilla.\nR permite hacer diferentes tipos de analisis, Estadistica Descriptiva, Estadistica Bayesiana, Modelos Estado Espacio, entre otros es decir en R podemos hacer macroeconometria, microeconometria, econometría fianciera, evaluación de impacto, econometría bayesiana, econometria espacial entre otros analisis estadisticos."
+  },
+  {
+    "objectID": "operaciones.html#interfaz-de-rstudio",
+    "href": "operaciones.html#interfaz-de-rstudio",
+    "title": "Primeros Pasos",
+    "section": "Interfaz de RStudio",
+    "text": "Interfaz de RStudio\nRStudio proporciona una interfaz gráfica de usuario (GUI) que facilita el trabajo con R, lo que lo hace más accesible para los usuarios que no están familiarizados con la programación en línea de comandos.\nAl ingresar a RStudio nos vamos a encontrar con cuatro principales paneles:\n\n\nEditor : En el editor será donde colocaremos el codigo y los comandos de ejecución.\nConsola: Alli veremos los resultados o los outputs del codigo.\nEspacio de Trabajo: Aqui podemos ver el historial de comandos que hemos usado, las diferentes variables, datasets, objetos y funciones que hemos declarado entre otras cosas\nArchivos / graficas / paquetes: Allí podremos visualizar los plots que generemos en el codigo, las librerias que tengamos instaladas, los archivos de nuestro PC entre otros\n\nNos vamos a centrar en el trabajo que se hace en el primer panel."
+  },
+  {
+    "objectID": "operaciones.html#comentarios",
+    "href": "operaciones.html#comentarios",
+    "title": "Primeros Pasos",
+    "section": "Comentarios",
+    "text": "Comentarios\nEs una buena practica comentar nuestro codigo, esto significa ir colocando texto no ejecutable que explique que esta haciendo nuestro codigo, esto facilitará más adelante nuestra vida al corregir el codigo y a otras personas que quieran entender lo que estamos haciendo, para comentar el codigo usamos el #, con esto el texto que se encuentre despues del numeral no será ejecutado.\n\n#Esto es un comentario"
+  },
+  {
+    "objectID": "operaciones.html#paquetes-y-limpieza-de-entorno",
+    "href": "operaciones.html#paquetes-y-limpieza-de-entorno",
+    "title": "Primeros Pasos",
+    "section": "Paquetes y limpieza de entorno",
+    "text": "Paquetes y limpieza de entorno\nR siempre guarda las diferentes variables, datasets entre otros objetos, es por esto que es una buena practica al principio de cada codigo limipar nuestro entorno, esto lo hacemos con el siguiente comando.\n\nremove(list = ls())\n\nDado que R es un lenguaje Open Source, los usuarios pueden crear paquetes para facilitar o realizar nuevas operaciones que el R base no puede, sin embargo para hacer uso de estos paquetes debemos instalarlos y luego activarlos, la instalación solo se hace una vez, la activación si debe hacerse en cada codigo que deseemos volver a abrir RStudio, es una buena practica activar todos los paquetes en las primeras lineas de codigo.\n\noptions(repos = c(CRAN = \"http://cran.rstudio.com\"))\ninstall.packages(\"tinytex\")\ninstall.packages(\"TeX\") \ninstall.packages(\"dplyr\")\ninstall.packages(\"ggplot2\")\n\n\nlibrary(dplyr)\nlibrary(ggplot2)\nlibrary(tinytex)"
+  },
+  {
+    "objectID": "operaciones.html#operadores-aritmeticos",
+    "href": "operaciones.html#operadores-aritmeticos",
+    "title": "Primeros Pasos",
+    "section": "Operadores Aritmeticos",
+    "text": "Operadores Aritmeticos\nR incluye varios operadores aritmeticos que se utilizan para realizar operaciones matematicas. Los operadores aritmeticos incluyen:\n\n+ : Suma dos números\n- : Resta dos números\n* : Multiplica dos números\n/ : Divide dos números\n** : Eleva un número a una potencia"
+  },
+  {
+    "objectID": "operaciones.html#variables-y-tipos-de-objetos",
+    "href": "operaciones.html#variables-y-tipos-de-objetos",
+    "title": "Primeros Pasos",
+    "section": "Variables y tipos de objetos",
+    "text": "Variables y tipos de objetos\nDiremos que una variable es un “contenedor de información” en la que podemos “guardar” diferntes objetos, generalmente se escriben en minúscula, sin espacios ni tildes, comas, puntos, signos de interrogación o cualquier otro caracter a excepción del guión bajo, para declarar variable en R podemos usar <- como tambien =\nPara notación de este trabajo usaremos unicamente el igual.\n\nnombre_de_la_variable <- \"Valor de la variable\"\nnombre_de_la_variable = \"Valor de la variable\"\n\npara visualizar nuestra variable en la consola (Panel #2) solo basta con llamarla de nuevo o utilizar la función print, o podemos usar un ; y volver a llamar la funciín en la misma linea\n\nnombre_de_la_variable\n\n[1] \"Valor de la variable\"\n\nprint(nombre_de_la_variable)\n\n[1] \"Valor de la variable\"\n\nnombre_de_la_variable = \"Valor de la variable\"; nombre_de_la_variable\n\n[1] \"Valor de la variable\"\n\n\nLos objetos que guardamos en las variables pueden ser de diferentes tipos y en función de esto la forma de guardarlos cambia.\n\nobjeto_numeric = 3\nobjeto_logic = FALSE\nobjeto_character = \"Hola Mundo\"\nobjeto_complex = 1+0i\n\nPara verificar de que tipo o clase es un objeto podemos usar la función class, puede darse el caso de que requiero convertir un objeto de un tipo a otro tipo, para esto debo usar alguna de las siguientes funciones según corresponda\n\nx = 1\nclass(x)\n\n[1] \"numeric\"\n\nas.numeric(x)\n\n[1] 1\n\nas.logical(x)\n\n[1] TRUE\n\nas.character(x)\n\n[1] \"1\"\n\n\nPara hacer operaciones entre variables nos aseguramos que las variables sean de tipo numerico y operamos:\n\na = 5\nb = 7\n\nc = a + b\nc\n\n[1] 12"
+  },
+  {
+    "objectID": "operaciones.html#vectores",
+    "href": "operaciones.html#vectores",
+    "title": "Primeros Pasos",
+    "section": "Vectores",
+    "text": "Vectores\nLos vectores son entes matematicos que se usan para guardar datos de cierto tipo especifico, para crear vectores en R debemos usar el comando C, los vectores nos permiten hacer operaciones entre varios datos al mismo tiempo sin tener que recurrir a bucles\n\nmi_primer_vector = c(25,5,3,6,3,6)\nvector_dos = c(\"Hola\", \"mundo\")\nvector_tres = c(FALSE, TRUE, FALSE, TRUE)\n\nComo los vectores solamente pueden guardar un tipo de dato si llegamos a introducir diferentes tipos de datos el vector automaticamente va a transformar estos datos para que el vector quede solamente en función de un tipo de dato.\n\ny <- c(1.7, \"a\")   ## character\ny <- c(TRUE, 2)    ## numeric\ny <- c(\"a\", TRUE)  ## character\n\nPodemos crear vectores con determinadas caracteristicas de maneras mucho más eficientes, por ejemplo:\n\n#Crear un vector secuencia 1 a 1.\nDias = 0:15; Dias\n\n [1]  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15\n\n#Crar un vector secuencia que avance cada j unidades: seq(a,b,j)\nMedicion = seq(1,5, 0.5); Medicion\n\n[1] 1.0 1.5 2.0 2.5 3.0 3.5 4.0 4.5 5.0\n\n#Crear un vector donde los objetos se repiten n veces: rep(objeto,n)\nNumerico = rep(1,10); Numerico\n\n [1] 1 1 1 1 1 1 1 1 1 1\n\n#Crear un vector de repeticiones\nDummy = c(rep(0,5), rep(1,10), rep(0,5)); Dummy\n\n [1] 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0\n\n\nPara concatenar vectores simplemente debemos:\n\nvector_a = c(2,54,3)\nvector_b = c(3,7,8)\nvector_c = c(vector_a, vector_b); vector_c\n\n[1]  2 54  3  3  7  8\n\n\nLas operaciones con vectores funcionan de manera similar a las operaciones con variables, en ultimas seguimos operando variables solo que en este caso las variables no contienen un solo valor sino contienen un vector de valores, los vectores entre si deben ser iguales o multiplos. En caso de ser iguales se hará la operación uno a uno, en cambio si son multiplos se repetira la operación en los diferentes vectores, tal que:\n\n#Operación uno a uno\nvector_a = c(2,54,3)\nvector_b = c(3,7,8)\nvector_c = vector_a + vector_b; vector_c\n\n[1]  5 61 11\n\n#Operación entre multiplos\nvector_a = c(2,54,3,4,8,5)\nvector_b = c(3,7,8)\nvector_c = vector_a + vector_b; vector_c\n\n[1]  5 61 11  7 15 13\n\n\npodemos hacer estadistica descriptiva de los vectores usando la función summary\n\nsummary(vector_a)\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n   2.00    3.25    4.50   12.67    7.25   54.00 \n\n\nentre otros posibles metodos de la clase vector\n\n#describir cuales son los elementos que no se repiten del vector\nunique(vector_a)\n\n[1]  2 54  3  4  8  5\n\n#Ordenar elementos de menor a mayor\nsort(vector_a)  \n\n[1]  2  3  4  5  8 54\n\n#Posición ordenada de menor a mayor\norder(vector_a) \n\n[1] 1 3 4 6 5 2\n\n#Ordenar elementos de mayor a menor:\nsort(vector_a, decreasing = TRUE)       \n\n[1] 54  8  5  4  3  2"
+  },
+  {
+    "objectID": "operaciones.html#matrices",
+    "href": "operaciones.html#matrices",
+    "title": "Primeros Pasos",
+    "section": "Matrices",
+    "text": "Matrices\nUna matriz es una estructura de datos bidimensional que consiste en una colección de elementos organizados en filas y columnas. Se puede representar como una tabla o cuadrícula de números o valores. Cada elemento en la matriz se identifica por su posición, que se determina por el número de fila y el número de columna.\nPara crear matrices en R podemos hacerlo directamente o a partir de vectores previamente creados, para crear matrices directamente usamos:\n\nMAT1=matrix(1:10,nrow = 5,byrow = TRUE);MAT1 \n\n     [,1] [,2]\n[1,]    1    2\n[2,]    3    4\n[3,]    5    6\n[4,]    7    8\n[5,]    9   10\n\nMAT2=matrix(10:19,ncol=5, nrow = 2, byrow = FALSE);MAT2\n\n     [,1] [,2] [,3] [,4] [,5]\n[1,]   10   12   14   16   18\n[2,]   11   13   15   17   19\n\n\ndonde el primer parametro corresponde a con que vamos a llenar esas matrices, este intervalo debe ser multiplo del numero de filas o columnas que queremos crear, el segundo si vamos a hacer la creación de la matriz desde la columna o desde las filas, podemos hacerlo tambien desde ambas.\nAhora bien, si queremos crear matrices a partir de vectores ya establecidos previamente usaremos el siguiente codigo:\n\na = c(1,4,5,7,9,7,10,6,5,7,9)\nb = c(3,4,6,8,2,3,11,1,2,5,6)\nMAT3 = cbind(a,b); MAT3\n\n       a  b\n [1,]  1  3\n [2,]  4  4\n [3,]  5  6\n [4,]  7  8\n [5,]  9  2\n [6,]  7  3\n [7,] 10 11\n [8,]  6  1\n [9,]  5  2\n[10,]  7  5\n[11,]  9  6\n\nMAT4 = rbind(a,b); MAT4 \n\n  [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9] [,10] [,11]\na    1    4    5    7    9    7   10    6    5     7     9\nb    3    4    6    8    2    3   11    1    2     5     6\n\n\ncomo nos podemos dar cuenta al usar vectores tambien podemos crear las matrices desde las filas o desde las columnas\n\nOperaciones entre matrices\nComo sabemos las matrices tienen formas de operarse de manera diferente a los escalares o constantes, por lo cual vamos a detallar cada una de las operaciones principales:\n\n#Suma escalar - matriz\nMAT1 + 10\n\n     [,1] [,2]\n[1,]   11   12\n[2,]   13   14\n[3,]   15   16\n[4,]   17   18\n[5,]   19   20\n\n#Suma matriz - matriz\nMAT3 + t(MAT4)\n\n       a  b\n [1,]  2  6\n [2,]  8  8\n [3,] 10 12\n [4,] 14 16\n [5,] 18  4\n [6,] 14  6\n [7,] 20 22\n [8,] 12  2\n [9,] 10  4\n[10,] 14 10\n[11,] 18 12\n\n#Multiplicar escalar - matriz\nMAT3*10\n\n        a   b\n [1,]  10  30\n [2,]  40  40\n [3,]  50  60\n [4,]  70  80\n [5,]  90  20\n [6,]  70  30\n [7,] 100 110\n [8,]  60  10\n [9,]  50  20\n[10,]  70  50\n[11,]  90  60\n\n\nPodemos a su vez tambien crear nuevas matrices especiales\n\n#Matriz Transpuesta: t() \nt(MAT1) \n\n     [,1] [,2] [,3] [,4] [,5]\n[1,]    1    3    5    7    9\n[2,]    2    4    6    8   10\n\n#Matriz identidad: diag()\ndiag(5)\n\n     [,1] [,2] [,3] [,4] [,5]\n[1,]    1    0    0    0    0\n[2,]    0    1    0    0    0\n[3,]    0    0    1    0    0\n[4,]    0    0    0    1    0\n[5,]    0    0    0    0    1\n\n#Matriz diagonal: diag()\nMat_diag = diag(1:10)\n\nFinalmente calcularemos la multiplicación matricial que recordemos no se hace punto a punto sino por medio de un proceso diferente, tambien la inversa de una matriz y la determinante\n\n#Producto de matrices\ndim(MAT3) #conocer las dimensiones de una matriz: 11x2\n\n[1] 11  2\n\ndim(MAT4) #2x11, son multiplicable. por ende:\n\n[1]  2 11\n\nMAT3%*%MAT4\n\n      [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9] [,10] [,11]\n [1,]   10   16   23   31   15   16   43    9   11    22    27\n [2,]   16   32   44   60   44   40   84   28   28    48    60\n [3,]   23   44   61   83   57   53  116   36   37    65    81\n [4,]   31   60   83  113   79   73  158   50   51    89   111\n [5,]   15   44   57   79   85   69  112   56   49    73    93\n [6,]   16   40   53   73   69   58  103   45   41    64    81\n [7,]   43   84  116  158  112  103  221   71   72   125   156\n [8,]    9   28   36   50   56   45   71   37   32    47    60\n [9,]   11   28   37   51   49   41   72   32   29    45    57\n[10,]   22   48   65   89   73   64  125   47   45    74    93\n[11,]   27   60   81  111   93   81  156   60   57    93   117\n\n#Inversa de una matriz: solve()\nsolve(Mat_diag)\n\n      [,1] [,2]      [,3] [,4] [,5]      [,6]      [,7]  [,8]      [,9] [,10]\n [1,]    1  0.0 0.0000000 0.00  0.0 0.0000000 0.0000000 0.000 0.0000000   0.0\n [2,]    0  0.5 0.0000000 0.00  0.0 0.0000000 0.0000000 0.000 0.0000000   0.0\n [3,]    0  0.0 0.3333333 0.00  0.0 0.0000000 0.0000000 0.000 0.0000000   0.0\n [4,]    0  0.0 0.0000000 0.25  0.0 0.0000000 0.0000000 0.000 0.0000000   0.0\n [5,]    0  0.0 0.0000000 0.00  0.2 0.0000000 0.0000000 0.000 0.0000000   0.0\n [6,]    0  0.0 0.0000000 0.00  0.0 0.1666667 0.0000000 0.000 0.0000000   0.0\n [7,]    0  0.0 0.0000000 0.00  0.0 0.0000000 0.1428571 0.000 0.0000000   0.0\n [8,]    0  0.0 0.0000000 0.00  0.0 0.0000000 0.0000000 0.125 0.0000000   0.0\n [9,]    0  0.0 0.0000000 0.00  0.0 0.0000000 0.0000000 0.000 0.1111111   0.0\n[10,]    0  0.0 0.0000000 0.00  0.0 0.0000000 0.0000000 0.000 0.0000000   0.1\n\n#Determinante de la matriz: det()\ndet(Mat_diag)\n\n[1] 3628800\n\n\nEstos anteriores procesos si no cumplen con determinadas caracteristicas no se pueden llevar a cabo, solo se puede invertir matrices invertibles, es decir que su determinante sea diferente de 0, entre otras caracteristicas\npara acceder a elementos especificos de la matriz debemos hacer uso del indice en formato (x,y) tal que sea (fila, columna)\n\nMAT2\n\n     [,1] [,2] [,3] [,4] [,5]\n[1,]   10   12   14   16   18\n[2,]   11   13   15   17   19\n\n#Mostrar el elemento ij de la matriz: MAT[i,j]\nMAT2[2,1]\n\n[1] 11\n\nMAT2[1,2]\n\n[1] 12\n\n\npodemos hacer esto tambien para mostrar solo una fila o solo una columna de la matriz\n\nMAT2\n\n     [,1] [,2] [,3] [,4] [,5]\n[1,]   10   12   14   16   18\n[2,]   11   13   15   17   19\n\n#Mostrar los elementos de la fila i: MAT[i,]\nMAT2[1,]\n\n[1] 10 12 14 16 18\n\n#Mostrar los elmentos de la columna j: MAT[,j]\nMAT2[,1]\n\n[1] 10 11\n\n\npara mejor entendimiento de nuestra matriz podemos cambiarle los nombres a las filas y las columnas, esto tambien nos facilitará el trabajo posterior\n\nrownames(MAT1) = c(\"a\",\"b\",\"c\",\"d\",\"e\")\ncolnames(MAT1) = c(\"f\",\"g\")\nMAT1\n\n  f  g\na 1  2\nb 3  4\nc 5  6\nd 7  8\ne 9 10"
+  },
+  {
+    "objectID": "operaciones.html#operadores-logicos-y-de-comparación",
+    "href": "operaciones.html#operadores-logicos-y-de-comparación",
+    "title": "Primeros Pasos",
+    "section": "Operadores logicos y de comparación",
+    "text": "Operadores logicos y de comparación\nLos operadores logicos se utilizan para combinar expresiones lógicas y producir un resultado verdadero o falso. Además, se pueden utilizar los operadores de comparación para crear expresiones lógicas. Los operadores logicos y de comparación entre vectores de las matrices son los siguientes:\n\n#Elementos mayores o iguales a j en el vector\na>=4\n\n [1] FALSE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE\n\n#Elementos menores o iguales a j en el vector\na<=4\n\n [1]  TRUE  TRUE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE\n\n#Elementos iguales a j en el vector\na==4\n\n [1] FALSE  TRUE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE\n\n#Elementos diferentes a i en el vector\nb!=6\n\n [1]  TRUE  TRUE FALSE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE FALSE\n\n#Dos afirmaciones verdaderas: \"&\"\na>=1 & b==3 # Recuerden que & es un \"y\" matemático\n\n [1]  TRUE FALSE FALSE FALSE FALSE  TRUE FALSE FALSE FALSE FALSE FALSE\n\n#Al menos una es cierta: \"|\"\na>=1 | b==3 # Recuerden que | es un \"o\" matemático\n\n [1] TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE\n\n#Negación: \"!\"\n!a < 0 #a no es menor que cero\n\n [1] TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE"
+  },
+  {
+    "objectID": "operaciones.html#na-y-nan",
+    "href": "operaciones.html#na-y-nan",
+    "title": "Primeros Pasos",
+    "section": "Na y NaN",
+    "text": "Na y NaN\nCuando el codigo nos reporta un dato Na tenemos un missing value, es decir, datos vacios. Por otra parte cuando tenemos un NaN se traduce como un “non a number” es decir que el resultado de la operación no se puede calcular dado que es indeterminado"
+  },
+  {
+    "objectID": "spatial_stats.html",
+    "href": "spatial_stats.html",
+    "title": "¿Qué es la Estadistica y Econometría Espacial?",
+    "section": "",
+    "text": "La estadistica espacial introduce la ubicación espacial de las observaciones, es decir, trabajamos con datos georeferenciados. Si recordamos la primera Ley de Tolber “Todo esta relacionado con todo lo demás, pero cosas cercanas están mas relacionadas que cosas distantes” nos daremos cuenta que al hacer analísis espaciales vamos a necesitar herramientas diferentes a las tradicionales. dentro de la Estadistica Espacial vamos a encontrar tres principales áreas de conocimientos:\n\nGeoestadística / Geostatical Data: La geoestadistica se centra en el análisis y la modelización de cambios en variables continuas asociadas a información espacial, en esta rama tenemos unos puntos de medición a lo largo del tiempo e intentamos estimar como se comporta la variable en otros puntos cercanos.\nProcesos Puntuales / Point Patterns Este tipo de análisis estudia la distribución de la ubicación de una serie de eventos en una región determinada. Por ejemplo casos de una enfermedad en una ciudad o la distribución de cada especie de arboles en un bosque, usualmente los procesos puntuales tienden a preguntarse si la aprarición de los sucesos es uniforme (o aleatoria) en el espacio o si en algunos lugares los sucesos aparecen con mayor o menor frecuencia\nDatos Agregados / Lattice Data En este tipo de analisis conocemos la ubicación de todos los eventos de interés o al menos agregados en una región de estudio y por ende analizamos individualmente, en general usamos modelos de regresión que modelan la correlación entre variables vecinas."
+  },
+  {
+    "objectID": "spatial_stats.html#datos-espaciales",
+    "href": "spatial_stats.html#datos-espaciales",
+    "title": "¿Qué es la Estadistica y Econometría Espacial?",
+    "section": "Datos Espaciales",
+    "text": "Datos Espaciales\nLos datos espaciales se pueden definir como información que representa la posición de un punto o área en el espacio con los atributos asociados a esta información La información espacial esta asociada a un poligono irregular (área) o a configuraciones regulares (lattice)\nEstos datos tienen dos vectores dimensionales de localización, incluso un tercer vector de altura. A partir de esto podemos sacar patrones de puntos espaciales respecto a la ocurrencia o no de un evento."
+  },
+  {
+    "objectID": "spatial_stats.html#econometría-espacial",
+    "href": "spatial_stats.html#econometría-espacial",
+    "title": "¿Qué es la Estadistica y Econometría Espacial?",
+    "section": "Econometría Espacial",
+    "text": "Econometría Espacial\nLa econometría espacial hace parte de los datos agregados, al introducir datos espaciales nos vamos a dar cuenta que el análisis econometrico tradicional no va a ser suficiente dado que en la mayoria de casos puede presentar autocorrelación espacial y por ende requeriremos nuevas tecnicas de análisis, usaremos como base la ya conocida regresión lineal y a este modelo le agregaremos terminos que nos modelen explicitamente al dependencia espacial con regiones vecinas, con esto podremos poner en evidencia diferentes efectos espaciales como el Spillover efect (derrame) y solucionar los problemas de autocorrelación espacial entre las variables del modelo .\nLa econometría espacial tiene aplicaciones en muchos campos, especialmente en:\n\nBiologia\nCiencia Politica\nClimatologia\nMedicina y Epidemiologia\nUrbanismo y Economía"
+  },
+  {
+    "objectID": "spatial_stats.html#efectos-espaciales",
+    "href": "spatial_stats.html#efectos-espaciales",
+    "title": "¿Qué es la Estadistica y Econometría Espacial?",
+    "section": "Efectos Espaciales",
+    "text": "Efectos Espaciales\nLos efectos espaciales son la razón principal de tener un campo serapado entre la econometría y la econometría espacial, los principales efectos espaciales son:\n\nDependencia Espacial\nEn la mayoria de ejercicios empiricos en la cual se aplica la ciencia regional los datos contienen caracteristicas de espacio o espacio y tiempo, es decir, datos espaciales. la dependencia espacial puede ser considerada como la existencia de un relación entre lo que pasa en un punto en el espacio y lo que pasa en otro lugar. esto puede ser ocasionado por dos motivos principales, el primero es un termino de error de las observaciones en una unidad espacial contigüa (efecto Spillover) y el segundo es que existe algún fenomeno de interacción espacial natural del comportamiento humano.\n\n\nHeterogeneidad Espacial\nLas unidades espaciales tienden a estar lejanas de la homogeneidad, por ejemplo lugares urbanos tienen poblaciones de diferentes niveles de ingreso y las regiones tienen varios grados de desarrollo tecnologico estos pueden estar reflejados en errores altos sea por incorrecta especificación o por ausencia de variables relevantes termina por resultar en heterosceasticidad"
+  },
+  {
+    "objectID": "spatial_stats.html#bibliografia",
+    "href": "spatial_stats.html#bibliografia",
+    "title": "¿Qué es la Estadistica y Econometría Espacial?",
+    "section": "Bibliografia",
+    "text": "Bibliografia\nAnselin, L. (1988). Spatial econometrics: methods and models. Vol. 4. Springer Science & Business Media.\nCressie, N. (2015). Statistics for spatial data. John Wiley & Sons.\nGómez.-Rubio V(2022) Una introducción a la estadística espacial. Universidad de Castilla-La Mancha"
+  },
+  {
+    "objectID": "ts_e_uni.html",
+    "href": "ts_e_uni.html",
+    "title": "Series de Tiempo Estacionarias (Univariadas)",
+    "section": "",
+    "text": "Lo sentimos, estamos trabajando en esto"
+  },
+  {
+    "objectID": "ts_ne_uni.html",
+    "href": "ts_ne_uni.html",
+    "title": "Series de Tiempo No Estacionarias (Univariadas)",
+    "section": "",
+    "text": "Podemos decir que existen 2 tipos de tendencias, las tendencias deterministicas y estocasticas, estas se pueden representar de la forma:\n\\[\ny_t = \\text{tendencia} + \\text{componente estacionario} + \\text{error}\n\\\\\ny_t = a_0 + \\delta t + \\varepsilon_t\n\\]\nUna tendencia deterministica es una función no aleatoria del tiempo, mientras que una tendencia estocastica es aleatoria y varia en el tiempo, las tendencias pueden detectarse mediante:\n\nMetodos informales: Grafico de la serie y función de autocorrelación muestral\nMetodos formales: Prueba de raíces unitarias Dickey-Fuller\n\nUn ejemplo de una tendencia estocastica es una caminata aleatoria\n\n\nSea un proceso estocastico \\(y_t\\) que sigue una caminata aleatoria si:\n\\[\ny_t = y_{t-1} + \\varepsilon_{t}\n\\\\\n\\varepsilon_t \\thicksim RB(0, \\sigma^2)\n\\]\nSi hacemos sustitución repedida de esta formula:\n\\[\ny_1 = y_0 + \\varepsilon_1\n\\\\\ny_2 = y_0 + \\varepsilon_1 + \\varepsilon_{2}\n\\\\\ny_2 = y_0 + \\varepsilon_1 + \\varepsilon_2 + \\varepsilon_3\n\\]\nlo cual podemos expresar como:\n\\[\ny_t = y_0 + \\sum^{t}_{i=0}{\\varepsilon_{t-i}}\n\\]\nSi asumimos \\(y_0\\) como un valor deterministico podremos decir lo siguiente de un proceso altamente persistente:\nmedia:\n\\[\nE[y_{t}] = y_0\n\\]\nVarianza:\n\\[\nvar[y_t] = \\sum^{t}_{i = 1}{var(\\varepsilon_{t-i})}\n\\\\\nvar[y_t] = t\\sigma^2\n\\]\nLa varianza varia en función de de t, es decir no es constante y por ende diremos que el proceso no es estacionario, si conocemos la media y la varianza de un proceso podemos conocer tambien la función de autocovarianza.\nsabemos que:\n\\[\n\\gamma_s = E[(y_t-y_0)(y_{t-s}-y_0)]\n\\]\nY podemos expresar \\(y_t\\) como:\n\\[\ny_t - y_0 = \\sum^{t}_{i=0}{\\varepsilon_{j}}\n\\]\npor lo cual remplazando tenemos que:\n\\[\n\\gamma_s = E[(\\sum^{t}_{i=1}{\\varepsilon_{j}})(\\sum^{t - s}_{i=1}{\\varepsilon_{j}})]\n\\\\\n\\gamma_s = E[(\\sum^{t-s}_{i=1}{\\varepsilon^{2}_{j}})]\n\\\\\n\\gamma_s = \\sum^{t-s}_{i=1}{E[\\varepsilon^{2}_{j}]}\n\\\\\n\\gamma_s = (t-s)\\sigma^2_{\\varepsilon}\n\\]\nFinalmente hallamos la autocorrelación:\nsabemos que:\n\\[\n\\rho_s = \\frac{cov(y_t, y_{t-s})}{\\sqrt{var(y_t)*var(y_{t-s})}}\n\\\\\n\\rho_s = \\frac{\\sigma^2_{\\varepsilon}(t-s)}{\\sqrt{\\sigma^2_{\\varepsilon}t *\\sigma^2_{\\varepsilon}(t-s)}}\n\\\\\n\\rho = \\frac{\\sigma^2_{\\varepsilon}(t-s)}{\\sigma^2_{\\varepsilon}\\sqrt{t(t-s)}}\n\\\\\n\\rho_s = \\frac{t-s}{\\sqrt{t}\\sqrt{t-s}}\n\\\\\n\\rho_s = \\sqrt{\\frac{t-s}{t}}\n\\]\n\n\n\nla deriva la podemos definir como una constante \\(a_0\\) que nos deja al modelo de la siguiente forma:\n\\[\ny_t = a_0 + y_{t-1} + \\varepsilon_{t}\n\\]\nsi queremos visualizar las diferencias entre el proceso de caminata aleatoria y el proceso de caminata aleatoria con deriva podemos mirar el siguiente la siguiente imagen\n\n\n\n\n\nsi realizamos la iteración del proceso obtendremos el siguiente resultado:\n\\[\ny_1 = a_0 + y_0 + \\varepsilon_1\n\\\\\ny_2 = a_0 + y_1 + \\varepsilon_2\n\\\\\ny_2 = a_0 + (a_0 + y_0 + \\varepsilon_1) + \\varepsilon_2\n\\\\\ny_2 = 2a_0 + y_0 + \\varepsilon_1 + \\varepsilon_2\n\\]\nPor lo cual generalizando:\n\\[\ny_t = a_0t + y_0 + \\sum^{t}_{i = 1}{\\varepsilon_i}\n\\]\nEl comportamiento de \\(y_t\\) esta dado por dos componentes no estacionarios, uno lineal y deterministico \\(a_0\\) y un componente estocastico \\(\\sum{\\varepsilon_i}\\) al obtener el valor esperado tenemos que:\n\\[\nE[y_t] = E[a_0t] + E[y_0] + E[\\sum^{t}_{i = 1}{\\varepsilon_i}]\n\\\\\nE[y_t] = a_0t + y_0\n\\]\nel cual es de la misma forma que una recta \\(mx + b\\), por lo cual diremos que el valor esperado de un proceso de caminata aleatoria con deriva nos mostrará en promedio cual será la tendencia que va a seguir el proceso.\ndado que nuestra deriva es constante no nos va a afectar nuestra varianza, autocovarianza ni autocorrelación:\nvarianza:\n\\[\nvar[y_t] = t\\sigma^2\n\\]\nautocovarianza\n\\[\n\\gamma_s = (t-s)\\sigma^2_{\\varepsilon}\n\\]\nautocorrelación\n\\[\n\\rho_s = \\sqrt{\\frac{t-s}{t}}\n\\]\n\n\n\nsi tenemos un proceso estocastico \\(y_t\\) y este proceso obedece a un modelo ARMA(p,q) con tendencia deterministica lineal, esta obedece a la ecuación.\n\\[\na(L)y_t = a_0 + \\delta t + \\beta(L)\\varepsilon_t\n\\]\nUn proceso estocastico \\(y_t\\) sigue un modelo ARIMA (p,d,q) si \\(y_t \\thicksim ARMA\\) donde, recordemos que una diferenciación es de la forma y se expersa la cantidad de diferenciaciones de la serie en el componente d del arima.\n\\[\n\\Delta^\\alpha y_t = (1 - L)^\\alpha y_t\n\\]\npor lo cual un modelo ARIMA (p,d,q) puede ser escrito como:\n\\[\na(L)\\Delta^{\\alpha}y_t = a_0 + \\beta (L)\\varepsilon_t\n\\\\\n\\Delta^{\\alpha}y_t = ARMA(p,q) + \\varepsilon_t\n\\]\nSi por otro lado queremos incluir un proceso que modele la tendencia ya no lineal sino cuadratica tambien se puede hacer, tal que:\n\\[\ny_t = c + at + bt^2 + \\varepsilon_t\n\\]"
+  },
+  {
+    "objectID": "ts_ne_uni.html#prueba-de-raiz-unitaria-dickey---fuller-df",
+    "href": "ts_ne_uni.html#prueba-de-raiz-unitaria-dickey---fuller-df",
+    "title": "Series de Tiempo No Estacionarias (Univariadas)",
+    "section": "Prueba de Raiz Unitaria, Dickey - Fuller (DF)",
+    "text": "Prueba de Raiz Unitaria, Dickey - Fuller (DF)\nLa prueba de raíz unitaria ADF es una prueba formal para determinar si una serie de tiempo tiene una raíz unitaria, es decir determinar si sigue una caminata aleatoria o un proceso estacionario.\nSea:\n\\[\ny_t = \\alpha + \\phi y_{t-1} + \\varepsilon_t\n\\]\nsi \\(|\\phi_t| < 1\\) entonces AR(1) es estacionario\nRestemos \\(y_{t-1}\\) a ambos lados de la ecuación\n\\[\ny_t - y_{t-1} = \\alpha + \\phi y_{t-1} - y_{t-1} + \\varepsilon_t\n\\\\\n\\Delta y_t = \\alpha + (\\phi- 1)y_{t-1} + \\varepsilon_t\n\\\\\n\\Delta y_t = \\alpha + \\rho y_{t-1} + \\varepsilon_t\n\\]\nY estimamos \\(\\rho\\), diremos que:\n\nSi \\(\\rho = 0\\) Hay raiz unitaria, es decir tenemos una caminata aleatoria con deriva\n\\[\ny_t = \\alpha + y_{t-1} + \\varepsilon_t\n\\]\nsi \\(\\rho < 0\\) No hay raiz unitaria, es decir tenemos un proceso AR estacionario\n\\[\ny_t = \\alpha + \\phi y_{t-1} + \\varepsilon_t\n\\]\n\nEl estadistico de prueba será el siguiente que compararemos con el valor critico\n\\[\nt_{calc} = \\frac{\\widehat{\\rho}}{ee(\\widehat{\\rho})}\n\\]\n\nPrueba de Dickey Fuller Aumentada (ADF)\nSi los datos muestran una tendencia clara, debemos usar la ADF, la ecuación de podría estimarse en este caso es:\n\\[\n\\Delta y_t = \\alpha + \\rho y_{t-1} + \\gamma t + \\varepsilon_t\n\\]\nMuy importante tener en cuenta que la inclusión de una tendencia lineal modifica los valores criticos para la prueba t\nsi los errores presentan correlación serial, la DF no es apropiada, para esto añadimos \\(\\rho\\) rezagos de \\(\\Delta y_{t}\\),"
+  },
+  {
+    "objectID": "w.html",
+    "href": "w.html",
+    "title": "Matriz de Pesos Espaciales (W)",
+    "section": "",
+    "text": "Una de las operaciones cruciales en la econometria espacial es expresar formalmente las dependencias espaciales para poder incorporarlas en un modelo, para esto asumimos que las observaciones estan organizadas en datos espaciales los cuales pueden ser puntos en una área regular o irregular, o en su defecto regiones en un mapa.\nPara hacer esto vamos a introducir el concepto de Matriz de pesos espaciales o matriz de contigüidad, Considere un sistema S de N unidades espaciales, numeradas i = 1, 2,3,…,n y una variable x observable para cada una de esas unidades espaciales\n\\[\nW = \\begin{equation}\\begin{bmatrix}w_{11} & w_{12} &  ... & w_{1n}\\\\w_{21} & w_{22} & ... & w_{2n} \\\\ ... & ... & ... & ...\\\\ w_{n1} & w_n2 & ... & w_{nn}\\end{bmatrix}\\end{equation}\n\\]\ndonde cada elemento de esta matriz de contigüidad esta definido como:\n\\[\nw_{ij}= \\left\\{ \\begin{array}{lcc} 1 &   si  & j \\in N(i) \\\\ 0 &  si &j \\notin N(i) \n\\end{array} \\right.\n\\]\ndonde N(i) es el conjunto de vecinos de la localización j, De esta manera la matriz W es una matriz cuadrada no estocastica cuyos elementos w reflejan la contigüidad entre los datos espaciales, cada elemento 1 de la matriz correspondera a una contiguidad entre unidades espaciales, por convención un dato espacial no puede ser contigüo consigo mismo lo cual nos resulta en una diagonal principal de ceros.\nPara definir la matriz W podemos usar diferentes criterios sobre el conjunto de vecinos de una localización, usualmente recurrimos a criterios de contigüidad fisicos, tal que tenemos 3 tipos de criterios principales:"
+  },
+  {
+    "objectID": "w.html#contigüidad-fisica",
+    "href": "w.html#contigüidad-fisica",
+    "title": "Matriz de Pesos Espaciales (W)",
+    "section": "Contigüidad Fisica",
+    "text": "Contigüidad Fisica\n\nCriterio Tipo Torre\nLa matriz tipo torre define como vecinos a las observaciones o datos espaciales que comparten algún lado espacial, como solo hablamos de lados podemos imaginarnos los movimientos de la ficha de Ajedres Torre\n\n\n\n\n\n\n\nCriterio Tipo Reina\nLa matriz tipo reina define como vecinos a las observaciones o datos espaciales que comparten cualquier limite espacial, al igual que en el ejemplo anterior podemos imaginarnos los movimientos de la ficha de Ajedres Reina (Dama)\n\n\n\n\n\n\n\nCriterio Tipo Alfil\nLa matriz tipo alfil define como vecinos a las observaciones o datos espaciales que comparten limites diagonales, al igual que en el ejemplo anterior podemos imaginarnos los movimientos de la ficha de Ajedres Alfil"
+  },
+  {
+    "objectID": "w.html#contigüidad-en-función-de-distancia",
+    "href": "w.html#contigüidad-en-función-de-distancia",
+    "title": "Matriz de Pesos Espaciales (W)",
+    "section": "Contigüidad en Función de Distancia",
+    "text": "Contigüidad en Función de Distancia\nEstos tres criterios anteriores usan al usar una contigüidad fisica son facilmente usables en poligonos regulares, sin embargo, la mayoria de poligonos son poligonos irregulares en donde un criterio de contigüidad fisica es un criterio muy restrictivo, es por esto que recurrimos a marcas o rciterios en función de la distancia, esta distancia se puede calcular de diferentes maneras\n\nEuclidiana\nManhattan\nMinskowski\n\n\nK - vecinos más cercanos (KNN)\nEn KNN obtendremos una matriz binaria en la cual generaremos unos centroides en cada poligono espacial, y calcularemos la distancia entre el centroide de nuestro poligono de interés y los centroides de los demas poligonos, los organizaremos y diremos que los k poligonos más cercanos son contigüos\n\\[\nw_{ij}= \\left\\{ \\begin{array}{lcc} 1 &   si  & \\text{el centroide de j es uno de los k centroides cercanos a i} \\\\ 0 &  si & \\text{en otro caso} \n\\end{array} \\right.\n\\]\n\n\nDistancia Basada en Umbrales / radios\nEn distancia basada en umbrales o radios obtendremos una matriz binaria en donde a criterio del investigador diremos que hay una contigüidad si la distancia entre centroides esta por debajo de determinado rango.\n\\[\nw_{ij}= \\left\\{ \\begin{array}{lcc} 1 &   si  & \\text{la distancia entre j e i es menor a n distancia} \\\\ 0 &  si & \\text{en otro caso} \n\\end{array} \\right.\n\\]\n\n\nDistancia Inversa\nEn la distancia inversa no obtendremos una matriz bianaria sino que nuestro parametro diferente de cero cambiará en función de la distancia inversa, es decir a mayor distancia menor el parametro y viceversa, en este criterio podremos controlar el nivel de descenso de la influencia de la distancia con un parametro alpha, tal que:\n\\[\nw_{ij}= \\left\\{ \\begin{array}{lcc} \\frac{1}{d^{\\alpha}} &   si  & i \\neq j \\\\ 0 &  si & i = j \n\\end{array} \\right.\n\\]"
+  },
+  {
+    "objectID": "w.html#matriz-de-pesos-espaciales-estandarizada",
+    "href": "w.html#matriz-de-pesos-espaciales-estandarizada",
+    "title": "Matriz de Pesos Espaciales (W)",
+    "section": "Matriz de Pesos Espaciales Estandarizada",
+    "text": "Matriz de Pesos Espaciales Estandarizada\nAlgunas veces requerimos estandarizar la matriz W, esta estandarización corresponde a la siguiente operación por filas:\n\\[\nw^{*}_{ij} = \\frac{w_{ij}}{\\sum w_{ij}}\n\\] donde\n\\[w^{*}_{ij} \\in W^{*}\\] Es decir cada elemento estandarizado de la matriz de pesos espaciales corresponde a la división entre 0 o 1 y la sumatoria de elementos con relación de esa fila, lo cual seria el porcentaje del total de relaciones de cada fila\nEsta estandarización puede ser muy útil en algunas instancias. por ejemplo, usando la matriz de pesos espaciales estandarizada podemos operador de retardo espacial."
+  },
+  {
+    "objectID": "w.html#operador-de-retardo-espacial",
+    "href": "w.html#operador-de-retardo-espacial",
+    "title": "Matriz de Pesos Espaciales (W)",
+    "section": "Operador de Retardo Espacial",
+    "text": "Operador de Retardo Espacial\nUno de los objetivos del uso de matrices de pesos espaciales en la especificación de un modelo econometrico espacial es poder relatar una variable en un punto en el espacio de las observaciones para esa variable entre otras unidades espaciales en el sistema, esto en el contexto de series de tiempo se le denomina como operador de retardo de la forma:\n\\[\ny_{t-k} = L^{k}y\n\\]\nEn el espacio no tenemos una dimensión temporal sino una dimensión geografica tal que en función del tipo de criterio que elijamos obtendremos un retardo espacacial diferente, para calcular el retardo espacial usamos:\n\\[\n\\rho = W^{*}Y\n\\]\nEn una matriz de tipo reina obtendremos un rezago parecido al siguiente:\n\n\n\n\n\nMientras que en una matriz de tipo torre tendremos un rezago parecido al siguiente:"
+  },
+  {
+    "objectID": "w.html#pendiente",
+    "href": "w.html#pendiente",
+    "title": "Matriz de Pesos Espaciales (W)",
+    "section": "PENDIENTE",
+    "text": "PENDIENTE\na esta pagina falta añadirle codigo en R y un ejemplo (puede ser el del parcial)"
+  },
+  {
+    "objectID": "w.html#bibliografia",
+    "href": "w.html#bibliografia",
+    "title": "Matriz de Pesos Espaciales (W)",
+    "section": "Bibliografia",
+    "text": "Bibliografia\nAnselin, L. (1988). Spatial econometrics: methods and models. Vol. 4. Springer Science & Business Media.\nArbia, G. (2014). A Primer for Spatial Econometrics: With Applications in R. Palgrave Macmillan."
+  }
+]

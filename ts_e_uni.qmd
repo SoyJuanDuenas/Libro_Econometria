@@ -1,0 +1,8 @@
+---
+title: "Series de Tiempo Estacionarias (Univariadas)"
+editor: visual
+---
+
+## AR ... MA
+
+Lo sentimos, estamos trabajando en esto
