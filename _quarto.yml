@@ -10,7 +10,6 @@ website:
         text: Acerca de
       - href: about_fundamentos_r.qmd
         text: Home
-    
   sidebar:
     style: "docked"
     search: true
@@ -19,6 +18,8 @@ website:
         contents:
           - href: about_fundamentos_r.qmd
             text: Introducción
+          - href: operaciones.qmd
+            text: Primeros Pasos
             
       - section: "Series de Tiempo"
         contents:

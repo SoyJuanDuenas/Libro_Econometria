@@ -165,7 +165,7 @@ $$
 \rho_s = \sqrt{\frac{t-s}{t}}
 $$
 
-### Procesos con estocasticos con tendencias 
+### Procesos con estocasticos con tendencias
 
 si tenemos un proceso estocastico $y_t$ y este proceso obedece a un modelo ARMA(p,q) con tendencia deterministica lineal, esta obedece a la ecuación.
 
@@ -173,7 +173,7 @@ $$
 a(L)y_t = a_0 + \delta t + \beta(L)\varepsilon_t
 $$
 
-Un proceso estocastico $y_t$ sigue un modelo ARIMA (p,d,q) si $y_t  \thicksim ARMA$ donde, recordemos que una diferenciación es de la forma y se expersa la cantidad de diferenciaciones de la serie en el componente d del arima.
+Un proceso estocastico $y_t$ sigue un modelo ARIMA (p,d,q) si $y_t \thicksim ARMA$ donde, recordemos que una diferenciación es de la forma y se expersa la cantidad de diferenciaciones de la serie en el componente d del arima.
 
 $$
 \Delta^\alpha y_t = (1 - L)^\alpha y_t
@@ -193,7 +193,7 @@ $$
 y_t = c + at + bt^2 + \varepsilon_t
 $$
 
-## Prueba de Raiz Unitaria,  Dickey - Fuller (DF)
+## Prueba de Raiz Unitaria, Dickey - Fuller (DF)
 
 La prueba de raíz unitaria ADF es una prueba formal para determinar si una serie de tiempo tiene una raíz unitaria, es decir determinar si sigue una caminata aleatoria o un proceso estacionario.
 
@@ -243,6 +243,18 @@ $$
 \Delta y_t = \alpha + \rho y_{t-1} + \gamma t + \varepsilon_t
 $$
 
+Estimamos $\rho$ y detallamos la siguiente prueba de hipotesis a partir del estadistico de prueba:
+
+$$
+t_{calc} = \frac{\widehat{\rho}}{ee(\widehat{\rho})}
+$$
+
+En donde:
+
+-   H0: la serie presenta una tendencia estocastica
+
+-   H1: La serie presenta una tendencia deterministica
+
 Muy importante tener en cuenta que la inclusión de una tendencia lineal modifica los valores criticos para la prueba t
 
 si los errores presentan correlación serial, la DF no es apropiada, para esto añadimos $\rho$ rezagos de $\Delta y_{t}$,
@@ -250,3 +262,5 @@ si los errores presentan correlación serial, la DF no es apropiada, para esto a
 # Pendientes
 
 en vez de colocar fotos de series deberiamos colocar codigo y simulaciones
+
+los \\\\ de LaTeX no hacen el salto de linea, verificar con el \u y si no, colcarlo manualmente

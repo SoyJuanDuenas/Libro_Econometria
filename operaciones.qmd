@@ -41,8 +41,6 @@ remove(list = ls())
 
 Dado que R es un lenguaje Open Source, los usuarios pueden crear paquetes para facilitar o realizar nuevas operaciones que el R base no puede, sin embargo para hacer uso de estos paquetes debemos instalarlos y luego activarlos, la instalación solo se hace una vez, la activación si debe hacerse en cada codigo que deseemos volver a abrir RStudio, es una buena practica activar todos los paquetes en las primeras lineas de codigo.
 
-
-
 ```{r}
 #| output: false
 options(repos = c(CRAN = "http://cran.rstudio.com"))
@@ -79,7 +77,6 @@ Diremos que una variable es un "contenedor de información" en la que podemos "g
 
 Para notación de este trabajo usaremos unicamente el igual.
 
-
 ```{r}
 nombre_de_la_variable <- "Valor de la variable"
 nombre_de_la_variable = "Valor de la variable"
@@ -93,7 +90,15 @@ print(nombre_de_la_variable)
 nombre_de_la_variable = "Valor de la variable"; nombre_de_la_variable
 ```
 
-Los objetos que guardamos en las variables pueden ser de diferentes tipos y en función de esto la forma de guardarlos cambia.
+Los objetos que guardamos en las variables pueden ser de diferentes tipos y en función de esto la forma de guardarlos cambia, en R existen los siguientes tipos de objetos:
+
+-   **Numericas:** datos que tienen numeros, pueden ser continuos (admiten decimales) o discretos (no admiten decimales)
+
+-   **Logicas:** Solo admiten dos valores, `True` o `False`
+
+-   **Caracteres:** Cadena de caracteres, lease palabras
+
+-   **Complejas:** Objetos que pertenecen al plano complejo
 
 ```{r}
 objeto_numeric = 3
@@ -115,7 +120,6 @@ as.character(x)
 
 Para hacer operaciones entre variables nos aseguramos que las variables sean de tipo numerico y operamos:
 
-
 ```{r}
 a = 5
 b = 7
@@ -135,8 +139,6 @@ vector_tres = c(FALSE, TRUE, FALSE, TRUE)
 ```
 
 Como los vectores solamente pueden guardar un tipo de dato si llegamos a introducir diferentes tipos de datos el vector automaticamente va a transformar estos datos para que el vector quede solamente en función de un tipo de dato.
-
-
 
 ```{r}
 y <- c(1.7, "a")   ## character
