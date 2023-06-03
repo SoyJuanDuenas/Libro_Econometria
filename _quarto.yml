@@ -4,12 +4,7 @@ project:
 
 website:
   title: "Libro Econometría"
-  navbar:
-    left:
-      - href: index.qmd
-        text: Acerca de
-      - href: about_fundamentos_r.qmd
-        text: Home
+  
   sidebar:
     style: "docked"
     search: true
@@ -19,7 +14,7 @@ website:
           - href: about_fundamentos_r.qmd
             text: Introducción
           - href: operaciones.qmd
-            text: Primeros Pasos
+            text: Primeros 
             
       - section: "Series de Tiempo"
         contents:
@@ -38,6 +33,14 @@ website:
             text: Estadistica y Relaciones Espaciales
           - href: w.qmd
             text: Matriz de Pesos Espaciales (W)            
+#  navbar:
+#    left:
+#      - href: index.qmd
+#        text: Acerca de
+#      - href: about_fundamentos_r.qmd
+#        text: Home
+    
+  
 format:
   html:
     theme: cosmo
