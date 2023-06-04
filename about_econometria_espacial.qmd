@@ -1,5 +1,0 @@
----
-title: "About"
----
-
-En esta pagina vamos a desarrollar tanto de manera teorica como practica la Econometría Espacial desde una perspectiva pedagogica aplicandola con Codigos de R a diferentes situaciones.

@@ -2,8 +2,6 @@
 title: "Libro Econometría"
 ---
 
-## Libro Econometría
-
 Le damos la bienvenida a este proyecto desarrollado por estudiantes de economía de la Universidad Nacional de Colombia, en el cual el lector podrá encontrar todo el material necesario para aprender desde cero todo lo relacionado con la linea de econometría de la carrera de economía por medio de explicaciones teoricas, ejemplos practicos y codigo de R. Adicional a esto, el lector podrá encontrar material adicional a los topicos obligatorios usuales en las carreras de economía.
 
 Creemos en que el conocimiento debe ser abierto y libre en donde lo único que se necesita para aprender es tener la iniciativa. Si el estudiante toma este libro, complementa con la bibliografía y hace ejercicios adicionales al final del recorrido tendrá un conocimiento superior al estudiante promedio de economía, queremos en este libro plasmar toda la ruta para darle las herramientas necesarias al estudiante inquieto y deseoso de conocimiento.

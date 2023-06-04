@@ -1,0 +1,14 @@
+---
+title: "Introducción al manejo de datos"
+editor: visual
+---
+
+Existen 3 principales conceptos en el manejo de datos
+
+-   Observaciones
+
+-   Variables
+
+-   Matrices
+
+los datos suelen estar organizados en una matriz en la cual cada fila representa una observación o caso mientras que cada columna representa una variable.

@@ -9,12 +9,16 @@ website:
     style: "docked"
     search: true
     contents:
+      - href: index.qmd
+        text: Bienvenido(s)
       - section: "Fundamentos de R"
         contents:
-          - href: about_fundamentos_r.qmd
-            text: Introducción
           - href: operaciones.qmd
-            text: Primeros 
+            text: Primeros Pasos
+          - href: estructuras.qmd
+            text: Estructuras
+          - href: primer_dataset.qmd
+            text: Introducción al manejo de datos en R
             
       - section: "Series de Tiempo"
         contents:
@@ -22,23 +26,13 @@ website:
             text: Series de Tiempo Estacionarias (Univariadas)
           - href: ts_ne_uni.qmd
             text: Series de Tiempo No Estacionarias (Univariadas)
-          - href: operaciones.qmd
-            text: Series de Tiempo Estacionarias (Multivariadas)
             
       - section: "Econometría Espacial"
         contents:
-          - href: about_econometria_espacial.qmd
-            text: Introducción
           - href: spatial_stats.qmd
             text: Estadistica y Relaciones Espaciales
           - href: w.qmd
             text: Matriz de Pesos Espaciales (W)            
-#  navbar:
-#    left:
-#      - href: index.qmd
-#        text: Acerca de
-#      - href: about_fundamentos_r.qmd
-#        text: Home
     
   
 format:

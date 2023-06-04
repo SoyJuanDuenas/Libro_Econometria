@@ -1,0 +1,12 @@
+---
+title: "Estructuras"
+editor: visual
+---
+
+## Estructuras de descisión / control 
+
+## Estructuras de bucle / flujo
+
+## Estructuras de salto
+
+## Funciones
