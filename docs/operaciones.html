@@ -103,11 +103,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
-  "location": "navbar",
+  "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "end",
-  "type": "overlay",
+  "panel-placement": "start",
+  "type": "textbox",
   "limit": 20,
   "language": {
     "search-no-results-text": "No results",
@@ -126,33 +126,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-sidebar docked nav-fixed">
+<body class="nav-sidebar docked">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
-      <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
-    <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">Libro Econometría</span>
-    </a>
-  </div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-  <span class="navbar-toggler-icon"></span>
-</button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item">
-    <a class="nav-link" href="./index.html">Acerca de</a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link active" href="./about_fundamentos_r.html" aria-current="page">Home</a>
-  </li>  
-</ul>
-              <div id="quarto-search" class="" title="Search"></div>
-          </div> <!-- /navcollapse -->
-      </div> <!-- /container-fluid -->
-    </nav>
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
       <h1 class="quarto-secondary-nav-title">Primeros Pasos</h1>
@@ -163,9 +140,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Libro Econometría</a> 
+    </div>
+      </div>
       <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
         <div id="quarto-search" class="" title="Search"></div>
@@ -188,19 +170,44 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./operaciones.html" class="sidebar-item-text sidebar-link active">Operaciones y Objetos Basicos</a>
+  <a href="./operaciones.html" class="sidebar-item-text sidebar-link active">Series de Tiempo Estacionarias (Multivariadas)</a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">Econometría Espacial</a>
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">Series de Tiempo</a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ts_e_uni.html" class="sidebar-item-text sidebar-link">Series de Tiempo Estacionarias (Univariadas)</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./ts_ne_uni.html" class="sidebar-item-text sidebar-link">Series de Tiempo No Estacionarias (Univariadas)</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./operaciones.html" class="sidebar-item-text sidebar-link">Series de Tiempo Estacionarias (Multivariadas)</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">Econometría Espacial</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./about_econometria_espacial.html" class="sidebar-item-text sidebar-link">Introducción</a>
@@ -341,7 +348,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <pre><code>[1] "Valor de la variable"</code></pre>
 </div>
 </div>
-<p>Los objetos que guardamos en las variables pueden ser de diferentes tipos y en función de esto la forma de guardarlos cambia.</p>
+<p>Los objetos que guardamos en las variables pueden ser de diferentes tipos y en función de esto la forma de guardarlos cambia, en R existen los siguientes tipos de objetos:</p>
+<ul>
+<li><p><strong>Numericas:</strong> datos que tienen numeros, pueden ser continuos (admiten decimales) o discretos (no admiten decimales)</p></li>
+<li><p><strong>Logicas:</strong> Solo admiten dos valores, <code>True</code> o <code>False</code></p></li>
+<li><p><strong>Caracteres:</strong> Cadena de caracteres, lease palabras</p></li>
+<li><p><strong>Complejas:</strong> Objetos que pertenecen al plano complejo</p></li>
+</ul>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>objeto_numeric <span class="ot">=</span> <span class="dv">3</span></span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>objeto_logic <span class="ot">=</span> <span class="cn">FALSE</span></span>
