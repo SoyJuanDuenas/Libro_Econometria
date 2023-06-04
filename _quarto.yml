@@ -19,7 +19,10 @@ website:
             text: Estructuras
           - href: primer_dataset.qmd
             text: Introducción al manejo de datos en R
-            
+      - section: "Fundamentos de Python"
+        contents:
+          - href: Intro_python.qmd
+            text: Introducción y Operadores
       - section: "Series de Tiempo"
         contents:
           - href: ts_e_uni.qmd

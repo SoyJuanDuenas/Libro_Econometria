@@ -271,5 +271,40 @@
     "title": "Primeros Pasos y Estructuras de Datos",
     "section": "PENDIENTES",
     "text": "PENDIENTES\nCompletar listas y dataframes, pasar los de titulo 2 a titulo 1 y los de titulo 3 a titulo 2 y hacer de los diferentes metodos de las estructuras de datos titulos 3, cambiar a str las matrices especiales y disminuir su dimensionalidad."
+  },
+  {
+    "objectID": "Intro_python.html",
+    "href": "Intro_python.html",
+    "title": "Variables y Operadores",
+    "section": "",
+    "text": "Python es un lenguaje de programación interpretado, de alto nivel, lento, facil de aprender y comunmente usado en analisis y manejo de datos por lo cual es multiparadigma.\nPython se puede ejecutar de dos principales maneras, desde un editor de texto como VSCode o desde un Notebook como lo puede ser Jupyter Notebook, Colab o Pycharm, la ventaja de los segundos es que nos permiten trabajar con texto enriquecido y ver los outputs por partes de nuestro codigo, los cual nos da una flexibilidad muy alta."
+  },
+  {
+    "objectID": "Intro_python.html#comentarios",
+    "href": "Intro_python.html#comentarios",
+    "title": "Variables y Operadores",
+    "section": "Comentarios",
+    "text": "Comentarios\nEs una buena practica comentar nuestro codigo, esto significa ir colocando texto no ejecutable que explique que esta haciendo nuestro codigo, esto facilitará más adelante nuestra vida al corregir el codigo y a otras personas que quieran entender lo que estamos haciendo, para comentar el codigo usamos el #, con esto el texto que se encuentre despues del numeral no será ejecutado\n#Esto es un comentario"
+  },
+  {
+    "objectID": "Intro_python.html#variables-y-tipo-de-objetos",
+    "href": "Intro_python.html#variables-y-tipo-de-objetos",
+    "title": "Variables y Operadores",
+    "section": "Variables y tipo de objetos",
+    "text": "Variables y tipo de objetos\nDiremos que una variable es un “contenedor de información” en la que podemos “guardar” diferntes objetos, generalmente se escriben en minúscula, sin espacios ni tildes, comas, puntos, signos de interrogación o cualquier otro caracter a excepción del guión bajo, en Python no es necesario declarar explicitamente el tipo de objeto que contiene una variable o colección.\nPara declarar una variable usamos:\nnombre_de_la_variable_0 = \"Valor De La Variable\"\nLos objetos que guardamos en las variables pueden ser de diferentes tipos y dependiendo del tipo de objeto cambiamos la forma de guardarlo\nobjeto_int = 2\nobjeto_string = \"Hola Mundo\"\nobjeto_float = 2.5\nobjeto_bool = False\nPuede darse el caso de que requiero convertir un objeto de un tipo a otro tipo, para esto debo usar el type casting el cual es alguna de las siguientes funciones según corresponda\nint(n_objeto)\nfloat(n_objeto)\nstr(n_objeto)\nbool(n_objeto)"
+  },
+  {
+    "objectID": "Intro_python.html#operadores-aritméticos",
+    "href": "Intro_python.html#operadores-aritméticos",
+    "title": "Variables y Operadores",
+    "section": "Operadores aritméticos",
+    "text": "Operadores aritméticos\nPython incluye varios operadores aritméticos que se utilizan para realizar operaciones matemáticas en números. Los operadores aritméticos incluyen:\n\n+: suma dos números\n-: resta dos números\n* : multiplica dos números\n/: divide dos números (devuelve un número flotante)\n//: divide dos números (devuelve la parte entera de la división)\n%: devuelve el resto de la división entre dos números\n**: eleva un número a una potencia\n\nA continuación, algunos ejemplos:\na = 10\nb = 5\n\nsuma = a + b\nresta = a - b\nmultiplicacion = a * b\ndivision = a / b\ndivision_entera = a // b\nresto = a % b\npotencia = a ** 2\nTambién podemos utilizar operadores aritméticos con variables y asignar el resultado a otra variable:\na = 10\nb = 5\n\nc = a + b\nd = a * b\n\nprint(c) # Output: 15\nprint(d) # Output: 50\nAdemás, Python sigue las reglas convencionales de precedencia de operadores aritméticos. Esto significa que las operaciones dentro de paréntesis se evalúan primero, seguidas de la exponenciación, la multiplicación y la división, y finalmente la suma y la resta. Podemos utilizar paréntesis para forzar un orden de evaluación diferente"
+  },
+  {
+    "objectID": "Intro_python.html#operadores-logicos-y-de-comparación",
+    "href": "Intro_python.html#operadores-logicos-y-de-comparación",
+    "title": "Variables y Operadores",
+    "section": "Operadores Logicos y de comparación",
+    "text": "Operadores Logicos y de comparación"
   }
 ]
