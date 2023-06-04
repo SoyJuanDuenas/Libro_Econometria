@@ -254,6 +254,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <li><a href="#variables-y-tipo-de-objetos" id="toc-variables-y-tipo-de-objetos" class="nav-link" data-scroll-target="#variables-y-tipo-de-objetos">Variables y tipo de objetos</a></li>
   <li><a href="#operadores-aritméticos" id="toc-operadores-aritméticos" class="nav-link" data-scroll-target="#operadores-aritméticos">Operadores aritméticos</a></li>
   <li><a href="#operadores-logicos-y-de-comparación" id="toc-operadores-logicos-y-de-comparación" class="nav-link" data-scroll-target="#operadores-logicos-y-de-comparación">Operadores Logicos y de comparación</a></li>
+  <li><a href="#opciones-de-formato" id="toc-opciones-de-formato" class="nav-link" data-scroll-target="#opciones-de-formato">Opciones de Formato</a></li>
   </ul>
 </nav>
     </div>
@@ -338,6 +339,50 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </section>
 <section id="operadores-logicos-y-de-comparación" class="level2">
 <h2 class="anchored" data-anchor-id="operadores-logicos-y-de-comparación">Operadores Logicos y de comparación</h2>
+<p>En Python, existen tres operadores lógicos que se utilizan para combinar expresiones lógicas y producir un resultado verdadero o falso:</p>
+<ul>
+<li><p><code>and</code>: Este operador devuelve verdadero si ambos operandos son verdaderos. En caso contrario, devuelve falso.</p></li>
+<li><p><code>or</code>: Este operador devuelve verdadero si al menos uno de los operandos es verdadero. Si ambos operandos son falsos, devuelve falso.</p></li>
+<li><p><code>not</code>: Este operador devuelve el valor opuesto al resultado de la expresión. Si la expresión es verdadera, devuelve falso y si la expresión es falsa, devuelve verdadero.</p></li>
+</ul>
+<p>Además, se pueden utilizar los operadores de comparación para crear expresiones lógicas. Los operadores de comparación son los siguientes:</p>
+<ul>
+<li><p><code>==</code> Este operador devuelve verdadero si los operandos son iguales.</p></li>
+<li><p><code>!=</code> Este operador devuelve verdadero si los operandos son diferentes.</p></li>
+<li><p><code>&gt;</code> Este operador devuelve verdadero si el operando izquierdo es mayor que el operando derecho.</p></li>
+<li><p><code>&lt;</code> Este operador devuelve verdadero si el operando izquierdo es menor que el operando derecho.</p></li>
+<li><p><code>&gt;=</code> Este operador devuelve verdadero si el operando izquierdo es mayor o igual que el operando derecho.</p></li>
+<li><p><code>&lt;=</code> Este operador devuelve verdadero si el operando izquierdo es menor o igual que el operando derecho.</p></li>
+</ul>
+</section>
+<section id="opciones-de-formato" class="level2">
+<h2 class="anchored" data-anchor-id="opciones-de-formato">Opciones de Formato</h2>
+<p>Las opciones de formato en Python se refieren a las diferentes formas en que se pueden dar formato a las cadenas de caracteres para incluir valores de variables y otros elementos. El objetivo de las opciones de formato es producir cadenas de caracteres que sean fáciles de leer y entender para los usuarios finales.</p>
+<p>Python ofrece varias opciones de formato para dar formato a cadenas de caracteres, entre ellas:</p>
+<ol type="1">
+<li><p>Formato de cadenas f: Las cadenas f o cadenas de formato le permiten incluir valores de variables dentro de una cadena de caracteres colocando los nombres de las variables entre llaves { }</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>nombre <span class="op">=</span> <span class="st">"Juan"</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>edad <span class="op">=</span> <span class="dv">25</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Hola, mi nombre es </span><span class="sc">{</span>nombre<span class="sc">}</span><span class="ss"> y tengo </span><span class="sc">{</span>edad<span class="sc">}</span><span class="ss"> años"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>Método de formato str.format(): El método de formato str.format() le permite especificar valores de variables dentro de una cadena de caracteres mediante la utilización de llaves {}.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>nombre <span class="op">=</span> <span class="st">"Juan"</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>edad <span class="op">=</span> <span class="dv">25</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Hola, mi nombre es </span><span class="sc">{}</span><span class="st"> y tengo </span><span class="sc">{}</span><span class="st"> años"</span>.<span class="bu">format</span>(nombre, edad))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>Utilización de operadores de formato %: Este método es similar al método de formato str.format(), pero utiliza operadores de formato % para especificar los valores de las variables.</p>
+<p>Muy importante tener en cuenta que:</p>
+<ul>
+<li><p>%s - Cadena (O cualquier objeto, como los números al representarlos en una cadena de texto)</p></li>
+<li><p>%d - Enteros</p></li>
+<li><p>%f - Números de punto flotante</p></li>
+<li><p>%.f - Números de punto flotante con una cantidad de números * fijos a la derecha del punto.</p></li>
+<li><p>%b - Enteros con representacion bin (minúscula/mayúscula)</p></li>
+<li><p>%x - Enteros con representacion hex (minúscula/mayúscula)</p></li>
+<li><p>%o - Enteros con representacion oct (minúscula/mayúscula)</p></li>
+</ul></li>
+</ol>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>nombre <span class="op">=</span> <span class="st">"Juan"</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>edad <span class="op">=</span> <span class="dv">25</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Hola, mi nombre es </span><span class="sc">%s</span><span class="st"> y tengo </span><span class="sc">%d</span><span class="st"> años"</span> <span class="op">%</span> (nombre, edad))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
 </section>

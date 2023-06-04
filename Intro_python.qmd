@@ -96,3 +96,71 @@ print(d) # Output: 50
 Además, Python sigue las reglas convencionales de precedencia de operadores aritméticos. Esto significa que las operaciones dentro de paréntesis se evalúan primero, seguidas de la exponenciación, la multiplicación y la división, y finalmente la suma y la resta. Podemos utilizar paréntesis para forzar un orden de evaluación diferente
 
 ## Operadores Logicos y de comparación
+
+En Python, existen tres operadores lógicos que se utilizan para combinar expresiones lógicas y producir un resultado verdadero o falso:
+
+-   `and`: Este operador devuelve verdadero si ambos operandos son verdaderos. En caso contrario, devuelve falso.
+
+-   `or`: Este operador devuelve verdadero si al menos uno de los operandos es verdadero. Si ambos operandos son falsos, devuelve falso.
+
+-   `not`: Este operador devuelve el valor opuesto al resultado de la expresión. Si la expresión es verdadera, devuelve falso y si la expresión es falsa, devuelve verdadero.
+
+Además, se pueden utilizar los operadores de comparación para crear expresiones lógicas. Los operadores de comparación son los siguientes:
+
+-   `==` Este operador devuelve verdadero si los operandos son iguales.
+
+-   `!=` Este operador devuelve verdadero si los operandos son diferentes.
+
+-   `>` Este operador devuelve verdadero si el operando izquierdo es mayor que el operando derecho.
+
+-   `<` Este operador devuelve verdadero si el operando izquierdo es menor que el operando derecho.
+
+-   `>=` Este operador devuelve verdadero si el operando izquierdo es mayor o igual que el operando derecho.
+
+-   `<=` Este operador devuelve verdadero si el operando izquierdo es menor o igual que el operando derecho.
+
+## Opciones de Formato
+
+Las opciones de formato en Python se refieren a las diferentes formas en que se pueden dar formato a las cadenas de caracteres para incluir valores de variables y otros elementos. El objetivo de las opciones de formato es producir cadenas de caracteres que sean fáciles de leer y entender para los usuarios finales.
+
+Python ofrece varias opciones de formato para dar formato a cadenas de caracteres, entre ellas:
+
+1.  Formato de cadenas f: Las cadenas f o cadenas de formato le permiten incluir valores de variables dentro de una cadena de caracteres colocando los nombres de las variables entre llaves { }
+
+    ``` python
+    nombre = "Juan"
+    edad = 25
+    print(f"Hola, mi nombre es {nombre} y tengo {edad} años")
+    ```
+
+2.  Método de formato str.format(): El método de formato str.format() le permite especificar valores de variables dentro de una cadena de caracteres mediante la utilización de llaves {}.
+
+    ``` python
+    nombre = "Juan"
+    edad = 25
+    print("Hola, mi nombre es {} y tengo {} años".format(nombre, edad))
+    ```
+
+3.  Utilización de operadores de formato %: Este método es similar al método de formato str.format(), pero utiliza operadores de formato % para especificar los valores de las variables.
+
+    Muy importante tener en cuenta que:
+
+    -   %s - Cadena (O cualquier objeto, como los números al representarlos en una cadena de texto)
+
+    -   %d - Enteros
+
+    -   %f - Números de punto flotante
+
+    -   %.f - Números de punto flotante con una cantidad de números \* fijos a la derecha del punto.
+
+    -   %b - Enteros con representacion bin (minúscula/mayúscula)
+
+    -   %x - Enteros con representacion hex (minúscula/mayúscula)
+
+    -   %o - Enteros con representacion oct (minúscula/mayúscula)
+
+``` python
+nombre = "Juan"
+edad = 25
+print("Hola, mi nombre es %s y tengo %d años" % (nombre, edad))
+```
