@@ -14,7 +14,7 @@ website:
       - section: "Fundamentos de R"
         contents:
           - href: operaciones.qmd
-            text: Primeros Pasos
+            text: Primeros Pasos y Estructuras de Datos
           - href: estructuras.qmd
             text: Estructuras
           - href: primer_dataset.qmd

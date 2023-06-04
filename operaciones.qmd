@@ -1,5 +1,5 @@
 ---
-title: "Primeros Pasos"
+title: "Primeros Pasos y Estructuras de Datos"
 ---
 
 ## Acerca de R
@@ -68,6 +68,39 @@ R incluye varios operadores aritmeticos que se utilizan para realizar operacione
 
 -   `**` : Eleva un número a una potencia
 
+## Operadores logicos y de comparación
+
+Los operadores logicos se utilizan para combinar expresiones lógicas y producir un resultado verdadero o falso. Además, se pueden utilizar los operadores de comparación para crear expresiones lógicas. Los operadores logicos y de comparación entre vectores de las matrices son los siguientes:
+
+```{r}
+a = 2
+#Elementos mayores o iguales a j en el vector
+a>=4
+
+#Elementos menores o iguales a j en el vector
+a<=4
+
+#Elementos iguales a j en el vector
+a==4
+
+b = 2
+#Elementos diferentes a i en el vector
+b!=6
+
+#Dos afirmaciones verdaderas: "&"
+a>=1 & b==3 # Recuerden que & es un "y" matemático
+
+#Al menos una es cierta: "|"
+a>=1 | b==3 # Recuerden que | es un "o" matemático
+
+#Negación: "!"
+!a < 0 #a no es menor que cero
+```
+
+## Na y NaN
+
+Cuando el codigo nos reporta un dato Na tenemos un missing value, es decir, datos vacios. Por otra parte cuando tenemos un NaN se traduce como un "non a number" es decir que el resultado de la operación no se puede calcular dado que es indeterminado
+
 ## Variables y tipos de objetos
 
 Diremos que una variable es un "contenedor de información" en la que podemos "guardar" diferentes objetos, generalmente se escriben en minúscula, sin espacios ni tildes, comas, puntos, signos de interrogación o cualquier otro caracter a excepción del guión bajo, para declarar variable en R podemos usar \<- como tambien =
@@ -127,19 +160,39 @@ c
 
 ## Estructuras de datos
 
-Una colección es un objeto que puede contener varios valores o elementos en determinado orden o estructura, Las colecciones son fundamentales y se utilizan para almacenar y manupular datos
+Una colección puede contener varios objetos o elementos en determinado orden o estructura, Las colecciones son fundamentales y se utilizan para almacenar y manipular datos. se organizan por su dimensión (1ra, 2da, varias dimensiones) y si son homogeneas (todos los objetos deben ser del mismo tipo) o heterogeneas, a continuación detallaremos las principales estructuras de datos usadas en R
 
 ### Vectores
 
-Los vectores son entes matematicos que se usan para guardar objetos de cierto tipo especifico, para crear vectores en R debemos usar el comando `c`, los vectores nos permiten hacer operaciones entre varios datos al mismo tiempo sin tener que recurrir a bucles
+Los vectores son estructuras de una dimensionalidad homogenea, estos son entes matematicos que se usan para guardar objetos finitos de cierto tipo especifico, para crear vectores en R debemos usar el comando `c()`, los vectores nos permiten hacer operaciones entre varios datos al mismo tiempo sin tener que recurrir a bucles, existen cuatro tipos de vectores clasificados según el tipo de dato que contienen:
+
+-   **Numeric:** En R los vectores numericos son numeric por defecto (admiten decimales)
+
+-   **Character:** Vector de caracteres o tambien denominados string
+
+-   **Logical:** Solo pueden tomar tres posibles valores `TRUE`, `FALSE` y `NA` los vectores lógicos son usualmente el resultado de operadores lógicos o de comparación
+
+-   **Interger:** En R los vectores numericos son numeric por defecto (admiten decimales), si queremos un interger (numero entero que no admite decimales) añadimos la letra L después del número
 
 ```{r}
-mi_primer_vector = c(25,5,3,6,3,6)
-vector_dos = c("Hola", "mundo")
-vector_tres = c(FALSE, TRUE, FALSE, TRUE)
+vector_numerico = c(25,5,3,6,3,6)
+vector_de_caracteres = c("Hola", "mundo")
+vector_logico = c(FALSE, TRUE, FALSE, TRUE)
 ```
 
-Como los vectores solamente pueden guardar un tipo de dato, si llegamos a introducir diferentes tipos de datos, el vector automaticamente va a transformar estos datos para que el vector quede solamente en función de un tipo de dato.
+Para comprobar el tipo de vector usamos:
+
+```{r}
+typeof(vector_logico)
+```
+
+Como con los vectores solamente se pueden guardar un tipo de dato, si llegamos a introducir diferentes tipos de datos, el vector automaticamente va a transformar estos datos para que el vector quede solamente en función de un tipo de dato siguiendo el siguiente orden:
+
+$$
+\text{logical < interger < double < character}
+$$
+
+En donde se ponderará más los tipos de la derecha que los de la izquerda
 
 ```{r}
 y <- c(1.7, "a")   ## character
@@ -209,9 +262,26 @@ sort(vector_a, decreasing = TRUE)
 
 ```
 
+En ocasiones queremos acceder a una parte del vector, o incluso a un solo elemento, para esto usamos los corchetes cuadrados \[ \]. R a diferencia de Python es base 1 por esto empezamos a contar desde 1 los elementos.
+
+```{r}
+v = c("uno", "dos", "tres", "cuatro")
+nuevo_vector = v[c(1,3,2)]; nuevo_vector
+```
+
+En la anterior linea de codigo creamos un vector de caracteres con los numeros desde el uno hasta el cuatro. Posterior a esto, guardamos en un vector llamado nuevo_vector el primer, el tercer y el segundo elemento del vector v
+
+Los valores negativos eliminan los elementos en las posiciones mencionadas
+
+```{r}
+v = v[c(-2)];v
+```
+
+En la anterior linea de codigo al vector v le eliminamos el segundo elemento y sobreescribimos el vector v con los cambios realizados.
+
 ### Matrices
 
-Una matriz es una colección de datos bidimensional que consiste en un conjunto de elementos organizados en filas y columnas. Se puede representar como una tabla o cuadrícula de números o valores. Cada elemento en la matriz se identifica por su posición que se determina por el número de fila y columna.
+Una matriz es una colección de datos bidimensional que consiste en un conjunto de elementos del mismo tipo organizados en filas y columnas. (bidimensional y homogeneo) Se puede representar como una tabla o cuadrícula de números o valores. Cada elemento en la matriz se identifica por su posición que se determina por el número de fila y columna.
 
 Para crear matrices en R podemos hacerlo directamente o a partir de vectores previamente creados, para crear matrices directamente usamos:
 
@@ -278,7 +348,47 @@ det(Mat_diag)
 
 Estos anteriores procesos en caso de no cumplir con determinadas caracteristicas no se pueden llevar a cabo, solo se puede invertir matrices que su determinante sea diferente de 0, entre otras caracteristicas.
 
-para acceder a elementos especificos de la matriz debemos hacer uso del indice en formato (x,y) tal que sea (fila, columna)
+En R podemos usar la función `solve()` para resolver sistemas de ecuaciones lineales. Por ejemplo, si tenemos el siguiente sistema:
+
+$$
+Ax = b
+$$
+
+$$
+3x + 2y = 5
+$$
+
+$$
+x-y = 0
+$$
+
+el cual expresado matricialmente se expresa como:
+
+$$
+\begin{bmatrix}
+ 3 & 2 \\
+ 1 & -1 \\
+\end{bmatrix}
+\begin{bmatrix}
+ x \\
+ y \\
+\end{bmatrix}
+=
+\begin{bmatrix}
+ 5\\
+ 0\\
+\end{bmatrix}
+$$
+
+Podemos resolver el sistema de ecuaciones en R del siguiente modo:
+
+```{r}
+A = matrix(c(3,2,1,-1), ncol = 2, byrow = TRUE)
+b = c(5, 0)
+solve(A, b)
+```
+
+Para acceder a elementos especificos de la matriz debemos hacer uso del indice en formato (x,y) tal que sea (fila, columna)
 
 ```{r}
 MAT2
@@ -298,7 +408,7 @@ MAT2[1,]
 MAT2[,1]
 ```
 
-para mejor entendimiento de nuestra matriz podemos cambiarle los nombres a las filas y las columnas, esto nos facilitará el trabajo posterior.
+Para mejor entendimiento de nuestra matriz podemos cambiarle los nombres a las filas y las columnas, esto nos facilitará el trabajo posterior.
 
 ```{r}
 rownames(MAT1) = c("a","b","c","d","e")
@@ -306,39 +416,32 @@ colnames(MAT1) = c("f","g")
 MAT1
 ```
 
-## Operadores logicos y de comparación
-
-Los operadores logicos se utilizan para combinar expresiones lógicas y producir un resultado verdadero o falso. Además, se pueden utilizar los operadores de comparación para crear expresiones lógicas. Los operadores logicos y de comparación entre vectores de las matrices son los siguientes:
+Si queremos añadir columnas y filas a nuestras matrices creadas con anterioridad podemos emplear las funciones `cbind()` y `rbind()` respectivamente
 
 ```{r}
-#Elementos mayores o iguales a j en el vector
-a>=4
-
-#Elementos menores o iguales a j en el vector
-a<=4
-
-#Elementos iguales a j en el vector
-a==4
-
-#Elementos diferentes a i en el vector
-b!=6
-
-#Dos afirmaciones verdaderas: "&"
-a>=1 & b==3 # Recuerden que & es un "y" matemático
-
-#Al menos una es cierta: "|"
-a>=1 | b==3 # Recuerden que | es un "o" matemático
-
-#Negación: "!"
-!a < 0 #a no es menor que cero
+MAT1=matrix(1:10,nrow = 5,byrow = TRUE)
+MAT1 = rbind(MAT1, c(30,30));MAT1
 ```
 
-## Na y NaN
+```{r}
+MAT1=matrix(1:10,nrow = 5,byrow = TRUE)
+MAT1 = cbind(MAT1, c(30,30,30,30,30));MAT1
+```
 
-Cuando el codigo nos reporta un dato Na tenemos un missing value, es decir, datos vacios. Por otra parte cuando tenemos un NaN se traduce como un "non a number" es decir que el resultado de la operación no se puede calcular dado que es indeterminado
+Para eliminar filas usaremos \[-i,\] mientra que para eliminar columnas utilizaremos la notación \[ , -j\]
+
+```{r}
+MAT1 = MAT1[-5,]; MAT1
+```
+
+```{r}
+MAT1 = MAT1[,-3]; MAT1
+```
+
+### Listas
+
+### Dataframes
 
 ## PENDIENTES
 
-Hay que mirar las diferentes colecciones en R y sus metodos respectivos, o en su defecto creo que vectores y matrices son de hecho colecciones de R entonces identarlas con sus respectivos metodos
-
-Hay que narrar mejor esta parte
+Completar listas y dataframes, pasar los de titulo 2 a titulo 1 y los de titulo 3 a titulo 2 y hacer de los diferentes metodos de las estructuras de datos titulos 3, cambiar a str las matrices especiales y disminuir su dimensionalidad.
