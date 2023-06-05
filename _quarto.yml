@@ -21,8 +21,11 @@ website:
             text: Introducción al manejo de datos en R
       - section: "Fundamentos de Python"
         contents:
-          - href: Intro_python.qmd
+          - href: variables_operadores.ipynb
             text: Introducción y Operadores
+          - href: colecciones.ipynb
+            text: Colecciones o Estructuras de Datos
+            
       - section: "Series de Tiempo"
         contents:
           - href: ts_e_uni.qmd
